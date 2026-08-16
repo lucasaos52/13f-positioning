@@ -1,0 +1,124 @@
+\section{Event-clock studies, monitors, and tactical results}
+\label{sec:tactical}
+
+\paragraph{The clock itself.}
+Entering each name on the day its information became public (per
+holder-filing acceptance) instead of the D+45 batch adds
+$+0.21\%$/yr on the long side ($t=0.18$) and $+0.31\%$/yr on the
+short ($t=-0.22$): the cost of the batch clock is measured at
+approximately zero, consistent with the delay distribution of
+Section~\ref{sec:delays}.
+
+\paragraph{Classical interactions: five pre-registered conditional
+effects, none confirmed.}
+Theory motivates conditioning each 13F signal on a classical
+characteristic; five such interactions were pre-registered with
+target cells, expected signs, and a Bonferroni bar of $|t|\ge2.57$
+for the family. None confirmed (Table~\ref{tab:inter}); NCB
+replicated unconditionally at $t=+3.78$ inside the same module ---
+the factor is broad, not a corner-case effect.
+
+\begin{table}[t]
+\centering\footnotesize
+\caption{Pre-registered 13F$\times$classical interactions, 50
+quarters. Verdict statistic: paired delta between the target-tercile
+spread and the unconditional spread, NW(4).}
+\label{tab:inter}
+\begin{tabular}{llrrl}
+\toprule
+interaction (theory) & target & uncond.\ (t) & delta (t) & verdict \\
+\midrule
+NCB $\times$ mktcap (limits to arbitrage) & small & $+3.78$ & $+1.34$ & not confirmed \\
+dbreadth $\times$ IO (\citealt{nagel2005}-style) & low IO & $+1.17$ & $-1.42$ & not confirmed \\
+FSS $\times$ ADV (impact where illiquid) & illiquid & $-0.90$ & $+1.05$ & not confirmed \\
+pressure $\times$ vol (flow moves price in high vol) & high vol & $+1.09$ & $+0.77$ & not confirmed \\
+exit\_rate $\times$ momentum (exodus in losers) & losers & $+0.96$ & $+2.02$ & wrong sign \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{The pressure autopsy: why flow pressure should pay, why
+it mostly does not, and where the lesson survived.}
+The economic case for a flow-pressure factor is genuine, and its
+failure is as informative as NCB's success. A 13F reveals flows that
+were \emph{already executed}: by the decision date the quarter's
+selling has largely happened and its price impact is realized inside
+the filing quarter --- which is why the unconditional pressure
+signal dies once orthogonalized to momentum, reversal, and the
+concurrent quarter's return; there is nothing left to forecast. The
+one situation where pressure should still pay \emph{forward} is an
+\emph{unfinished liquidation}: a position large relative to ADV
+cannot be unwound in one quarter, so the filing reveals pending
+supply rather than consumed supply. This is measured, not
+conjectured: the mechanism stage of Section~\ref{sec:fss} shows
+distressed managers selling 34.5\% of remaining shares in the
+quarter \emph{after} the filing --- liquidation demonstrably
+continues past the disclosure.
+
+Two conditioning routes follow, with different fates. Route one
+conditions on the \emph{stock}: pressure should matter more where
+volatility is high (valuation uncertainty amplifies the impact of
+uninformed flow) --- the E4 interaction above, and the project's
+cleanest example of a flicker dying properly: promising in smoke,
+$t=+2.06$ on the old universe (just under the promotion bar), an
+identification autopsy --- conditioning on residual volatility
+versus ADV versus market cap to separate valuation uncertainty from
+disguised illiquidity --- that returned ``exploratory, no formal
+claim'' ($t=-0.50/-0.61$), and a fall to $t=+0.77$ on complete
+books: non-promotion vindicated by data it had never seen. Route two
+conditions on the \emph{seller}: restrict to managers whose selling
+is \emph{forced}, where continuation is guaranteed by the redemption
+itself rather than inferred from the stock's characteristics. That
+route is FSS, and it is the one that prices. The design lesson:
+\textbf{condition on the agent's constraint, not on the asset's
+state} --- the same asymmetry as Law 1.
+
+\paragraph{Imbalance reversal (\citealt{miori2022}).}
+Replicated in oracle form and re-evaluated with the biases removed
+(point-in-time snapshots instead of perfect foresight of the
+cross-section; universe-churn control): the adjusted premium is a
+fraction of the published point. We report both numbers as the
+clearest example in the project of how much 13F results depend on
+who-knew-what-when accounting.
+
+\paragraph{Quarter-end effects.}
+The window-dressing design (learned manager propensity, within-loser
+test to kill the momentum confound, permutation placebo) rejected
+both pre-registered signs, with the placebo tracking the thesis ---
+whatever exists lives in ownership/ADV structure, not in
+window-dressing propensity. A residual, honestly labeled
+hypothesis-generating: the post-photo reversal is entirely a
+December phenomenon ($-1.91\%$ in Q4 versus $-0.05\%$ otherwise,
+eleven annual observations), observationally equivalent to
+portfolio pumping \citep{carhart2002} or a January
+low-institutional-ownership bounce; with $n=11$ it remains a
+footnote.
+
+\paragraph{Amendment events.}
+Across 250k direction-signed events, material restatements move
+prices \emph{against} the direction of the correction
+($-0.10\%$ at $+3$d, $t=-3.52$; clean pre-event placebo);
+administrative amendments are zero, as they must be; confidential
+NEW-HOLDINGS reveals drift positively at $+10$d but with a
+contaminated placebo. The pre-registered thesis (price follows the
+correction) is dead; the inverted fact is consistent with amendments
+following stale-price attention rather than creating news.
+
+\paragraph{Daily monitors.}
+Three daily rules were evaluated against pre-registered bars on the
+drifted-book machinery. The short-squeeze alarm inverted into the
+useful rule: shorts spiking $+7\%$/5d on doubled volume
+\emph{revert} ($-1.21\%$ over the next 5d versus $-0.12\%$ calm,
+$t=-2.60$) --- the anti-panic rule is to hold, not cover.
+The aggregate deleveraging index is a risk conditioner, not a
+signal: correlation $+0.14$ with future ten-day market volatility,
+zero with future returns (Law 1 again); throttling gross above its
+expanding 80th percentile improves the combo proxy's Sharpe
+0.49$\to$0.55 and drawdown $-17\%\to-15\%$. Early covering at
+apparent exhaustion loses $1.5\%$/quarter to save 7 bps of borrow
+--- the pressure continues; the short is held through the quarter.
+The post-exhaustion tactical \emph{long} died at its gate
+(stress doubles the forced-sale rate, $12.2\%$ vs $6.7\%$, but the
+thesis-minus-placebo event return is $t=+0.95$, and the only
+significant cell is \emph{continuation}): distressed books do not
+V-bounce.

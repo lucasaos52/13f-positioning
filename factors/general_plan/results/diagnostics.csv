@@ -1,0 +1,15 @@
+,0
+perm_spread_actual,-0.00435569880494064
+perm_null_sd,0.0030085173691547203
+perm_perm_pvalue,0.16
+perm_n_events,44
+lead_lead_spread_mean,-0.012984514706021372
+lead_lead_t,-4.1950760579814546
+lead_verdict,FAIL (lookahead!)
+half_first_half_mean,-0.0064459816735479595
+half_second_half_mean,-0.002265415936333326
+half_first_half_t,-1.4397076497358612
+half_second_half_t,-0.37825884710476954
+corr_dacwb_mom_avg,-0.05931525607686894
+corr_nodrift_mom_avg,0.12657352264057006
+w_mkt_fallback_frac_avg,0.8906202404682635

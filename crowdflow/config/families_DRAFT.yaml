@@ -1,0 +1,265 @@
+# RASCUNHO 2026-08-16 (v2, com de/para explicito) - Tier A de
+# succession_candidates.csv. REVISAR antes de virar families.yaml.
+# Leitura: 'de' arquivou pela ultima vez em <last_q>; 'para' comecou
+# no trimestre seguinte com book quase identico (Jaccard >= 0.50).
+families:
+  - name: "Alken Asset Management Ltd."
+    ciks: [1562810, 1629996]
+    de:   "Alken Asset Management LLP (CIK 1562810, ate 2014Q3)"
+    para: "Alken Asset Management Ltd. (CIK 1629996, desde 2014Q4)"
+    note: "sim 1.00, handoff limpo, 8q antes / 34q depois"
+  - name: "Siguler Guff Advisers, LLC"
+    ciks: [1568814, 1328551]
+    de:   "SIGULER GUFF ADVISERS, LLC (CIK 1568814, ate 2022Q4)"
+    para: "Siguler Guff Advisers, LLC (CIK 1328551, desde 2023Q1)"
+    note: "sim 1.00, handoff limpo, 43q antes / 11q depois"
+  - name: "Fayez Sarofim & Co"
+    ciks: [315027, 937729]
+    de:   "Sarofim Fayez (CIK 315027, ate 2013Q3)"
+    para: "Fayez Sarofim & Co (CIK 937729, desde 2013Q4)"
+    note: "sim 1.00, handoff limpo, 2q antes / 35q depois"
+  - name: "CHUBB LTD"
+    ciks: [20171, 896159]
+    de:   "CHUBB CORP (CIK 20171, ate 2015Q4)"
+    para: "CHUBB LTD (CIK 896159, desde 2016Q1)"
+    note: "sim 1.00, handoff limpo, 11q antes / 1q depois"
+  - name: "JUMP TRADING, LLC"
+    ciks: [1520770, 1127998]
+    de:   "Jump Trading, LLC (CIK 1520770, ate 2019Q1)"
+    para: "JUMP TRADING, LLC (CIK 1127998, desde 2019Q2)"
+    note: "sim 1.00, handoff limpo, 25q antes / 6q depois"
+  - name: "PRINCETON CAPITAL MANAGEMENT LLC"
+    ciks: [868911, 1167026]
+    de:   "PRINCETON CAPITAL MANAGEMENT INC (CIK 868911, ate 2017Q3)"
+    para: "PRINCETON CAPITAL MANAGEMENT LLC (CIK 1167026, desde 2017Q4)"
+    note: "sim 1.00, handoff limpo, 18q antes / 35q depois"
+  - name: "CAXTON ASSOCIATES LLP"
+    ciks: [872573, 2051323]
+    de:   "CAXTON ASSOCIATES LP (CIK 872573, ate 2024Q4)"
+    para: "CAXTON ASSOCIATES LLP (CIK 2051323, desde 2025Q1)"
+    note: "sim 1.00, handoff limpo, 47q antes / 5q depois"
+  - name: "SPOT TRADING L.L.C."
+    ciks: [1511566, 1088412]
+    de:   "Spot Trading L.L.C (CIK 1511566, ate 2017Q1)"
+    para: "SPOT TRADING L.L.C. (CIK 1088412, desde 2017Q2)"
+    note: "sim 1.00, handoff limpo, 16q antes / 2q depois"
+  - name: "Davide Leone & Partners Investment Co Ltd."
+    ciks: [1538773, 1767846]
+    de:   "DAVIDE LEONE & PARTNERS INVESTMENT Co LLP (CIK 1538773, ate 2018Q4)"
+    para: "Davide Leone & Partners Investment Co Ltd. (CIK 1767846, desde 2019Q1)"
+    note: "sim 1.00, handoff limpo, 24q antes / 24q depois"
+  - name: "PEAK6 Investments LLC"
+    ciks: [1389957, 1756111]
+    de:   "PEAK6 Investments, L.P. (CIK 1389957, ate 2018Q2)"
+    para: "PEAK6 Investments LLC (CIK 1756111, desde 2018Q3)"
+    note: "sim 1.00, handoff limpo, 24q antes / 27q depois"
+  - name: "HAP Trading, LLC"
+    ciks: [1484972, 1049854]
+    de:   "HAP Trading, LLC (CIK 1484972, ate 2025Q2)"
+    para: "HAP Trading, LLC (CIK 1049854, desde 2025Q3)"
+    note: "sim 1.00, handoff limpo, 50q antes / 1q depois"
+  - name: "UNITED BANK"
+    ciks: [1044330, 1286478]
+    de:   "UNITED BANK, INC. (CIK 1044330, ate 2017Q3)"
+    para: "UNITED BANK (CIK 1286478, desde 2017Q4)"
+    note: "sim 1.00, handoff limpo, 18q antes / 34q depois"
+  - name: "Colony Group, LLC"
+    ciks: [1080628, 1542153]
+    de:   "COLONY GROUP LLC (CIK 1080628, ate 2023Q3)"
+    para: "Colony Group, LLC (CIK 1542153, desde 2023Q4)"
+    note: "sim 1.00, handoff limpo, 44q antes / 4q depois"
+  - name: "Smith Group Asset Management, LLC"
+    ciks: [1091561, 1893134]
+    de:   "Smith Asset Management Group LP (CIK 1091561, ate 2021Q2)"
+    para: "Smith Group Asset Management, LLC (CIK 1893134, desde 2021Q3)"
+    note: "sim 1.00, handoff limpo, 36q antes / 13q depois"
+  - name: "Select Equity Group, L.P."
+    ciks: [1126116, 1592643]
+    de:   "SELECT EQUITY GROUP INC (CIK 1126116, ate 2013Q3)"
+    para: "Select Equity Group, L.P. (CIK 1592643, desde 2013Q4)"
+    note: "sim 1.00, handoff limpo, 2q antes / 51q depois"
+  - name: "Grassi Investment Management"
+    ciks: [1135126, 1608531]
+    de:   "GRASSI INVESTMENT MANAGEMENT LLC (CIK 1135126, ate 2014Q1)"
+    para: "Grassi Investment Management (CIK 1608531, desde 2014Q2)"
+    note: "sim 1.00, handoff limpo, 4q antes / 46q depois"
+  - name: "Connor, Clark & Lunn Investment Management Ltd."
+    ciks: [1140804, 1596800]
+    de:   "CONNOR CLARK & LUNN INVESTMENT MANAGEMENT LTD (CIK 1140804, ate 2013Q4)"
+    para: "Connor, Clark & Lunn Investment Management Ltd. (CIK 1596800, desde 2014Q1)"
+    note: "sim 1.00, handoff limpo, 3q antes / 54q depois"
+  - name: "Teton Advisors, LLC"
+    ciks: [1444874, 2086025]
+    de:   "Teton Advisors, Inc. (CIK 1444874, ate 2025Q2)"
+    para: "Teton Advisors, LLC (CIK 2086025, desde 2025Q3)"
+    note: "sim 1.00, handoff limpo, 52q antes / 3q depois"
+  - name: "Spinnaker Capital LLC"
+    ciks: [1178653, 1719281]
+    de:   "SPINNAKER CAPITAL LTD (CIK 1178653, ate 2017Q3)"
+    para: "Spinnaker Capital LLC (CIK 1719281, desde 2017Q4)"
+    note: "sim 1.00, handoff limpo, 12q antes / 30q depois"
+  - name: "FORT PITT CAPITAL GROUP, LLC"
+    ciks: [1223052, 1663897]
+    de:   "FORT PITT CAPITAL GROUP INC (CIK 1223052, ate 2015Q3)"
+    para: "FORT PITT CAPITAL GROUP, LLC (CIK 1663897, desde 2015Q4)"
+    note: "sim 1.00, handoff limpo, 10q antes / 38q depois"
+  - name: "Baltimore-Washington Financial Advisors, Inc."
+    ciks: [1426221, 1555486]
+    de:   "Baltimore-Washington Financial Advisors Inc. (CIK 1426221, ate 2013Q3)"
+    para: "Baltimore-Washington Financial Advisors, Inc. (CIK 1555486, desde 2013Q4)"
+    note: "sim 1.00, handoff limpo, 2q antes / 53q depois"
+  - name: "GLG LLC"
+    ciks: [1425915, 1352261]
+    de:   "GLG INC. (CIK 1425915, ate 2013Q4)"
+    para: "GLG LLC (CIK 1352261, desde 2014Q1)"
+    note: "sim 1.00, handoff limpo, 4q antes / 16q depois"
+  - name: "PICTET ASSET MANAGEMENT SA"
+    ciks: [1291274, 1361570]
+    de:   "PICTET ASSET MANAGEMENT LTD (CIK 1291274, ate 2021Q2)"
+    para: "PICTET ASSET MANAGEMENT SA (CIK 1361570, desde 2021Q3)"
+    note: "sim 1.00, handoff limpo, 33q antes / 8q depois"
+  - name: "COMMONWEALTH EQUITY SERVICES, LLC."
+    ciks: [1333978, 312272]
+    de:   "Commonwealth Equity Services, Inc (CIK 1333978, ate 2017Q3)"
+    para: "COMMONWEALTH EQUITY SERVICES, LLC. (CIK 312272, desde 2017Q4)"
+    note: "sim 1.00, handoff limpo, 22q antes / 1q depois"
+  - name: "BlackRock, Inc."
+    ciks: [1364742, 2012383]
+    de:   "BlackRock Inc. (CIK 1364742, ate 2024Q2)"
+    para: "BlackRock, Inc. (CIK 2012383, desde 2024Q3)"
+    note: "sim 1.00, handoff limpo, 48q antes / 7q depois"
+  - name: "COMERICA SECURITIES,INC."
+    ciks: [1399248, 781875]
+    de:   "COMERICA SECURITIES INC (CIK 1399248, ate 2018Q4)"
+    para: "COMERICA SECURITIES,INC. (CIK 781875, desde 2019Q1)"
+    note: "sim 1.00, handoff limpo, 43q antes / 20q depois"
+  - name: "Wills Financial Group LLC"
+    ciks: [1525109, 2059579]
+    de:   "Wills Financial Group, Inc. (CIK 1525109, ate 2024Q4)"
+    para: "Wills Financial Group LLC (CIK 2059579, desde 2025Q1)"
+    note: "sim 1.00, handoff limpo, 47q antes / 5q depois"
+  - name: "SCHNIEDERS CAPITAL MANAGEMENT, LLC."
+    ciks: [1603937, 2057056]
+    de:   "SCHNIEDERS CAPITAL MANAGEMENT LLC (CIK 1603937, ate 2025Q2)"
+    para: "SCHNIEDERS CAPITAL MANAGEMENT, LLC. (CIK 2057056, desde 2025Q3)"
+    note: "sim 1.00, handoff limpo, 49q antes / 3q depois"
+  - name: "Quadrature Capital Ltd"
+    ciks: [1549410, 1651424]
+    de:   "Quadrature Capital LLP (CIK 1549410, ate 2015Q2)"
+    para: "Quadrature Capital Ltd (CIK 1651424, desde 2015Q3)"
+    note: "sim 1.00, handoff limpo, 6q antes / 91q depois"
+  - name: "Quadrature Capital LTD"
+    ciks: [1549410, 1651424]
+    de:   "Quadrature Capital LLP (CIK 1549410, ate 2015Q2)"
+    para: "Quadrature Capital LTD (CIK 1651424, desde 2015Q3)"
+    note: "sim 1.00, handoff limpo, 6q antes / 2q depois"
+  - name: "Echinus Advisors, LLC"
+    ciks: [1630629, 1602970]
+    de:   "Echinus Advisors LLC (CIK 1630629, ate 2016Q3)"
+    para: "Echinus Advisors, LLC (CIK 1602970, desde 2016Q4)"
+    note: "sim 1.00, handoff limpo, 8q antes / 15q depois"
+  - name: "Odey Holdings Ltd"
+    ciks: [1512597, 1877288]
+    de:   "Odey Holdings AG (CIK 1512597, ate 2021Q1)"
+    para: "Odey Holdings Ltd (CIK 1877288, desde 2021Q2)"
+    note: "sim 1.00, handoff limpo, 25q antes / 7q depois"
+  - name: "Rubric Capital Management LP"
+    ciks: [1628676, 1687509]
+    de:   "Rubric Capital Management, LLC (CIK 1628676, ate 2016Q3)"
+    para: "Rubric Capital Management LP (CIK 1687509, desde 2016Q4)"
+    note: "sim 1.00, handoff limpo, 8q antes / 41q depois"
+  - name: "KG FUNDS MANAGEMENT, LLC"
+    ciks: [1666370, 1657043]
+    de:   "KG Funds Management LLC (CIK 1666370, ate 2017Q4)"
+    para: "KG FUNDS MANAGEMENT, LLC (CIK 1657043, desde 2018Q1)"
+    note: "sim 1.00, handoff limpo, 9q antes / 17q depois"
+  - name: "PINEBRIDGE INVESTMENTS LLC"
+    ciks: [1531721, 2088548]
+    de:   "PINEBRIDGE INVESTMENTS, L.P. (CIK 1531721, ate 2025Q3)"
+    para: "PINEBRIDGE INVESTMENTS LLC (CIK 2088548, desde 2025Q4)"
+    note: "sim 1.00, handoff limpo, 35q antes / 3q depois"
+  - name: "Wela Strategies, Inc."
+    ciks: [1644329, 1700437]
+    de:   "Wela Strategies, LLC (CIK 1644329, ate 2017Q1)"
+    para: "Wela Strategies, Inc. (CIK 1700437, desde 2017Q2)"
+    note: "sim 1.00, handoff limpo, 1q antes / 1q depois"
+  - name: "MIZUHO SECURITIES USA LLC"
+    ciks: [1513006, 812291]
+    de:   "MIZUHO SECURITIES USA LLC (CIK 1513006, ate 2025Q1)"
+    para: "MIZUHO SECURITIES USA LLC (CIK 812291, desde 2025Q2)"
+    note: "sim 1.00, handoff limpo, 33q antes / 4q depois"
+  - name: "COWEN AND COMPANY, LLC"
+    ciks: [1466538, 48966]
+    de:   "COWEN INC. (CIK 1466538, ate 2019Q2)"
+    para: "COWEN AND COMPANY, LLC (CIK 48966, desde 2019Q3)"
+    note: "sim 1.00, handoff limpo, 15q antes / 23q depois"
+  - name: "Wela Strategies, Inc."
+    ciks: [1700437, 1644329]
+    de:   "Wela Strategies, Inc. (CIK 1700437, ate 2017Q2)"
+    para: "Wela Strategies, Inc. (CIK 1644329, desde 2017Q3)"
+    note: "sim 1.00, handoff limpo, 1q antes / 33q depois"
+  - name: "Beacon Wealthcare LLC"
+    ciks: [1107576, 1849336]
+    de:   "Beacon Wealthcare, Inc (CIK 1107576, ate 2020Q4)"
+    para: "Beacon Wealthcare LLC (CIK 1849336, desde 2021Q1)"
+    note: "sim 1.00, handoff limpo, 13q antes / 21q depois"
+  - name: "OSTRUM ASSET MANAGEMENT"
+    ciks: [1166767, 1767945]
+    de:   "Ostrum Asset Management (CIK 1166767, ate 2018Q3)"
+    para: "OSTRUM ASSET MANAGEMENT (CIK 1767945, desde 2018Q4)"
+    note: "sim 1.00, handoff limpo, 3q antes / 21q depois"
+  - name: "SP Asset Management LLC"
+    ciks: [1751817, 1962086]
+    de:   "SP Asset Management (CIK 1751817, ate 2022Q3)"
+    para: "SP Asset Management LLC (CIK 1962086, desde 2022Q4)"
+    note: "sim 1.00, handoff limpo, 18q antes / 14q depois"
+  - name: "Aquilo Capital Management, LLC"
+    ciks: [1750122, 1591986]
+    de:   "Aquilo Capital Management, LLC (CIK 1750122, ate 2018Q3)"
+    para: "Aquilo Capital Management, LLC (CIK 1591986, desde 2018Q4)"
+    note: "sim 1.00, handoff limpo, 2q antes / 28q depois"
+  - name: "Greenspring Associates, LLC"
+    ciks: [1545140, 1796458]
+    de:   "Greenspring Associates, Inc. (CIK 1545140, ate 2018Q4)"
+    para: "Greenspring Associates, LLC (CIK 1796458, desde 2019Q1)"
+    note: "sim 1.00, handoff limpo, 1q antes / 11q depois"
+  - name: "Wealthspire Advisors, LLC"
+    ciks: [1666612, 1646247]
+    de:   "Wealthspire Advisors, L.P. (CIK 1666612, ate 2020Q3)"
+    para: "Wealthspire Advisors, LLC (CIK 1646247, desde 2020Q4)"
+    note: "sim 1.00, handoff limpo, 4q antes / 22q depois"
+  - name: "Arboretum Ventures, LLC"
+    ciks: [1910112, 1965092]
+    de:   "Arboretum Ventures, Inc. (CIK 1910112, ate 2022Q4)"
+    para: "Arboretum Ventures, LLC (CIK 1965092, desde 2023Q1)"
+    note: "sim 1.00, handoff limpo, 5q antes / 3q depois"
+  - name: "TITLEIST ASSET MANAGEMENT, LLC"
+    ciks: [1223025, 1977759]
+    de:   "TITLEIST ASSET MANAGEMENT, LTD. (CIK 1223025, ate 2022Q4)"
+    para: "TITLEIST ASSET MANAGEMENT, LLC (CIK 1977759, desde 2023Q1)"
+    note: "sim 1.00, handoff limpo, 5q antes / 13q depois"
+  - name: "Bison Wealth, LLC"
+    ciks: [1633172, 1845251]
+    de:   "Bison Wealth, LLC (CIK 1633172, ate 2024Q4)"
+    para: "Bison Wealth, LLC (CIK 1845251, desde 2025Q1)"
+    note: "sim 1.00, handoff limpo, 12q antes / 5q depois"
+  - name: "Kryger Capital LLC"
+    ciks: [1911807, 2123957]
+    de:   "KRYGER CAPITAL Ltd (CIK 1911807, ate 2025Q4)"
+    para: "Kryger Capital LLC (CIK 2123957, desde 2026Q1)"
+    note: "sim 1.00, handoff limpo, 15q antes / 1q depois"
+  - name: "Nextech Invest, Ltd."
+    ciks: [1911010, 1595430]
+    de:   "Nextech Invest Ltd. (CIK 1911010, ate 2024Q4)"
+    para: "Nextech Invest, Ltd. (CIK 1595430, desde 2025Q1)"
+    note: "sim 1.00, handoff limpo, 9q antes / 5q depois"
+  - name: "Pinnacle Financial Partners, Inc."
+    ciks: [1115055, 2082866]
+    de:   "Pinnacle Financial Partners Inc (CIK 1115055, ate 2025Q3)"
+    para: "Pinnacle Financial Partners, Inc. (CIK 2082866, desde 2025Q4)"
+    note: "sim 1.00, handoff limpo, 10q antes / 3q depois"
+  - name: "CAPITOLIS LIQUID GLOBAL MARKETS LLC"
+    ciks: [1960050, 2094379]
+    de:   "Capitolis Liquid Global Markets LLC (CIK 1960050, ate 2025Q4)"
+    para: "CAPITOLIS LIQUID GLOBAL MARKETS LLC (CIK 2094379, desde 2026Q1)"
+    note: "sim 1.00, handoff limpo, 9q antes / 1q depois"

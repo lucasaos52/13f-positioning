@@ -1,0 +1,57 @@
+# crowdflow default configuration.
+# A run is fully described by this file plus a git SHA. Every number the
+# pipeline uses lives here; nothing is hardcoded in a function body.
+
+edgar:
+  # SEC returns 403 without a real contact address. Override with
+  # CROWDFLOW_USER_AGENT rather than committing your email.
+  user_agent: "crowdflow-research contact@example.com"
+  max_rps: 6.0            # SEC ceiling is 10/s; we stay below it
+  first_quarter: "2013Q2" # DERA structured datasets begin here
+  last_quarter: "2026Q1"  # last complete report quarter as of the base build
+
+curate:
+  drop_option_overlays: true    # putCall lines are notional, not ownership
+  drop_principal_amounts: true  # sshPrnamtType == PRN is debt
+  repair_cusip_check_digit: true
+  thousands_cutover_date: "2023-01-03"  # SEC Release 34-95148
+
+universe:
+  min_history_quarters: 4
+  min_equity_book_usd: 500000000
+  min_positions: 15
+  max_single_name_weight: 0.60   # excludes single-line wrapper filers
+  impact_exponent: 0.5           # square-root impact law
+  centrality_mode: degree        # or: eigenvector
+  turnover_halflife_q: 3.0
+  weights:
+    impact: 0.40
+    centrality: 0.40
+    turnover: 0.20
+  target_size: 25
+  buffer_size: 35                # hysteresis band
+  selection_lag_quarters: 1
+
+factor:
+  quarter_trading_days: 63
+  winsor_pct: 0.01
+  fragility_flow_lookback_q: 12
+  fragility_shrinkage: 0.25
+  neutralise: ["log_mktcap", "log_amihud"]
+
+backtest:
+  rebalance: "M"
+  price_floor_usd: 5.0
+  max_names: 3000
+  quantiles: 5
+  gross_leverage: 1.0
+  dollar_neutral: true
+  max_weight: 0.02
+  spread_bps: 4.0
+  impact_coef_bps: 12.0
+  borrow_bps_ann: 40.0
+  horizons_months: [1, 3, 6, 12]
+  newey_west_lags: 6
+
+seed: 20240614
+offline: false

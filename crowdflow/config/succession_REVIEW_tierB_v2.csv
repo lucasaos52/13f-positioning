@@ -1,0 +1,169 @@
+APROVAR,sugestao,motivo,predecessor_name,successor_name,name_similarity,gap_quarters,clean_handoff,predecessor_last_q,successor_first_q,predecessor_cik,successor_cik
+S,DUVIDA,adjudicado: nucleo do nome continua (rename/reorganizacao),"Lehman Financial Resources, Inc.",Lehman & Derafelo Financial Resources LLC,0.75,1,True,2018Q3,2018Q4,1589661,1767952
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),M&R CAPITAL MANAGEMENT INC,M & L Capital Management Ltd,0.75,1,True,2024Q3,2024Q4,1057395,1927627
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),PACIFIC HEIGHTS ASSET MANAGEMENT LLC,"Pacific Asset Management, LLC",0.75,1,True,2024Q3,2024Q4,1323414,2054012
+S,DUVIDA,adjudicado: nucleo do nome continua (rename/reorganizacao),Azimuth Capital Management LLC,Azimuth Capital Investment Management LLC,0.75,1,True,2022Q1,2022Q2,1352512,1942364
+S,DUVIDA,adjudicado: nucleo do nome continua (rename/reorganizacao),"Douglas C. Lane & Associates, Inc.","Douglas Lane & Associates, LLC",0.75,1,True,2015Q4,2016Q1,1004248,1672594
+S,DUVIDA,adjudicado: nucleo do nome continua (rename/reorganizacao),"Capstone Financial Group, Inc.","Capstone Triton Financial Group, LLC",0.75,1,True,2020Q3,2020Q4,1808129,1811805
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),CAPITAL GROWTH MANAGEMENT LP,First Growth Capital Management LLC,0.75,1,True,2020Q3,2020Q4,60335,1830236
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),"H Capital III, L.P.","H Capital III GP, L.P.",0.75,1,True,2021Q4,2022Q1,1651808,1912542
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),"H Capital II, L.P.","H Capital II GP, L.P.",0.75,1,True,2021Q4,2022Q1,1627836,1912547
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),VERTEX ONE ASSET MANAGEMENT INC.,"Asset Management One Co.,Ltd.",0.75,2,False,2019Q4,2020Q2,1389610,1068855
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),BTG Pactual Global Asset Management Ltd,BTG Pactual Asset Management US LLC,0.667,1,True,2024Q1,2024Q2,1567992,1569579
+S,DUVIDA,adjudicado: nucleo do nome continua (rename/reorganizacao),"Virtus Investment Advisers, Inc.","VIRTUS ADVISERS, LLC",0.667,1,True,2024Q4,2025Q1,19481,1587281
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),"S.A.C. GLOBAL INVESTORS, LLP",COMGEST GLOBAL INVESTORS S.A.S.,0.667,1,True,2014Q3,2014Q4,1317777,1574947
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),GREEN SQUARE CAPITAL LLC,"Capital Square, LLC",0.667,1,True,2019Q3,2019Q4,1166308,1798736
+S,DUVIDA,adjudicado: nucleo do nome continua (rename/reorganizacao),Credential Securities Inc.,Credential Qtrade Securities Inc.,0.667,1,True,2018Q2,2018Q3,2077904,2077908
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),"Union Square Opportunity GP, L.L.C.","Union Square GP 2008, L.L.C.",0.667,1,True,2016Q3,2016Q4,1633002,1677323
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),"Union Square GP 2004, L.L.C.","Union Square GP 2008, L.L.C.",0.667,1,True,2016Q3,2016Q4,1640023,1677323
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),"PINEBRIDGE INVESTMENTS, L.P.",PINEBRIDGE INVESTMENTS ASIA LTD,0.667,1,True,2025Q3,2025Q4,1531721,2111095
+S,DUVIDA,adjudicado: nucleo do nome continua (rename/reorganizacao),"Virtus Fund Advisers, LLC","VIRTUS ADVISERS, LLC",0.667,1,True,2024Q4,2025Q1,1319111,1587281
+S,DUVIDA,adjudicado: nucleo do nome continua (rename/reorganizacao),"Cornerstone Advisors, Inc.","Cornerstone Wealth Advisors, Inc.",0.667,2,False,2020Q3,2021Q1,1532520,1862176
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),"Blenheim Capital Management, L.L.C.","Yost Capital Management, L.L.C.",0.6,1,True,2014Q3,2014Q4,1389080,1489859
+S,DUVIDA,adjudicado: nucleo do nome continua (rename/reorganizacao),FOSTER DYKEMA CABOT & CO INC/MA,"FOSTER DYKEMA CABOT & PARTNERS, LLC",0.6,1,True,2023Q3,2023Q4,1037558,2011882
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),"STRAUS CAPITAL MANAGEMENT, L.L.C.","LANDSCAPE CAPITAL MANAGEMENT, L.L.C.",0.6,1,True,2013Q3,2013Q4,1086160,1536186
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),"STRAUS CAPITAL MANAGEMENT, L.L.C.","Alistair Capital Management, L.L.C.",0.6,1,True,2013Q3,2013Q4,1086160,1540557
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),"ANDOR CAPITAL MANAGEMENT, L.L.C.","Boyle Capital Management, L.L.C.",0.6,1,True,2016Q2,2016Q3,1166147,1573485
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),"Sheffield Asset Management, L.L.C.","Beaumont Asset Management, L.L.C.",0.6,1,True,2019Q3,2019Q4,1314150,1798756
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),Orchard Hill Capital Management LP,"KETTLE HILL CAPITAL MANAGEMENT, LLC",0.6,1,True,2016Q3,2016Q4,1565989,1387369
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),"PACIFIC ALTERNATIVE ASSET MANAGEMENT COMPANY, LLC","PACIFIC VIEW ASSET MANAGEMENT, LLC",0.6,1,True,2017Q3,2017Q4,1357372,1729381
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),"Financial Planning & Information Services, Inc.","Quantum Financial Planning Services, Inc.",0.6,1,True,2024Q3,2024Q4,1841433,2050169
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),First Western Capital Management Co,First Growth Capital Management LLC,0.6,1,True,2020Q3,2020Q4,1603142,1830236
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),"TIDE POINT CAPITAL MANAGEMENT, LP","Point Break Capital Management, LLC",0.6,1,True,2018Q3,2018Q4,1590569,1631943
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),"TIDE POINT CAPITAL MANAGEMENT, LP","Spruce Point Capital Management, LLC",0.6,1,True,2018Q3,2018Q4,1590569,1731579
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),"Grey Owl Capital Management, LLC","Green Owl Capital Management, LLC",0.6,1,True,2014Q3,2014Q4,1599375,1589248
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),Tipp Hill Capital Management LLC,"KETTLE HILL CAPITAL MANAGEMENT, LLC",0.6,1,True,2016Q3,2016Q4,1569853,1387369
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),SHINE INVESTMENT ADVISORY SERVICES INC,"CFS Investment Advisory Services, LLC",0.6,1,True,2020Q3,2020Q4,1002912,1845688
+S,DUVIDA,adjudicado: nucleo do nome continua (rename/reorganizacao),"Sapphire Ventures (GPE) I, L.L.C.","SAPPHIRE VENTURES, L.L.C.",0.6,1,True,2016Q3,2016Q4,1634035,1697665
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),Bridge Creek Capital Management LLC,"Morgan Creek Capital Management, LLC",0.6,1,True,2025Q3,2025Q4,1670903,1623781
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),"Blue Sky Asset Management, LLC","Blue Door Asset Management, LLC",0.6,1,True,2021Q3,2021Q4,1634301,1909147
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),"PACIFIC VIEW ASSET MANAGEMENT, LLC","Euro Pacific Asset Management, LLC",0.6,1,True,2019Q3,2019Q4,1729381,1796651
+S,DUVIDA,adjudicado: nucleo do nome continua (rename/reorganizacao),Taylor Hoffman Wealth Management,Taylor Hoffman Capital Management LLC,0.6,1,True,2024Q2,2024Q3,1727762,2042493
+S,DUVIDA,adjudicado: nucleo do nome continua (rename/reorganizacao),"B. Riley Wealth Management, Inc.","B. Riley Wealth Advisors, Inc.",0.6,1,True,2022Q2,2022Q3,1599892,1464811
+S,DUVIDA,adjudicado: nucleo do nome continua (rename/reorganizacao),Bremer Trust National Association,Bremer Bank National Association,0.6,1,True,2018Q4,2019Q1,1086555,1775321
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),MARSHALL FINANCIAL GROUP INC /ADV,CAPITAL FINANCIAL GROUP INC\CO\ /ADV,0.6,1,True,2025Q3,2025Q4,701189,1061555
+S,DUVIDA,adjudicado: nucleo do nome continua (rename/reorganizacao),"Strategic Wealth Management Group, LLC","Strategic Wealth Investment Group, LLC",0.6,1,True,2021Q2,2021Q3,1750403,1802365
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),COMPOSITE CAPITAL MANAGEMENT (HK) Ltd,Polymer Capital Management (HK) LTD,0.6,1,True,2023Q3,2023Q4,1683297,1970465
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),Accel XII Associates L.L.C.,Accel XI Associates L.L.C.,0.6,1,True,2020Q3,2020Q4,1601530,1535603
+S,DUVIDA,adjudicado: nucleo do nome continua (rename/reorganizacao),"Codex Capital, L.L.C.",Codex Capital Asset Management L.L.C.,0.6,1,True,2024Q1,2024Q2,1832187,2030542
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),"FirstMark Capital OF II GP, LLC","Ribbit Capital GP II, Ltd.",0.6,1,True,2021Q3,2021Q4,1845708,1912628
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),Blue Creek Capital Management Ltd,"Morgan Creek Capital Management, LLC",0.6,1,True,2025Q3,2025Q4,1854024,1623781
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),"Grafton Street Partners Fund, LP","Grafton Street Partners Management Company, LLC",0.6,1,True,2025Q3,2025Q4,1921789,1923769
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),"AH Capital Management, L.L.C."," NOTABLE CAPITAL MANAGEMENT, L.L.C.",0.6,1,True,2024Q4,2025Q1,1540358,2065606
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),Parvus Asset Management Europe Ltd,Parvus Asset Management Jersey Ltd,0.6,1,True,2025Q1,2025Q2,2022204,2061470
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),DNB ASSET MANAGEMENT AS,FEARNLEY ASSET MANAGEMENT AS,0.6,1,True,2025Q3,2025Q4,1456670,2056821
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),DNB ASSET MANAGEMENT AS,STOREBRAND ASSET MANAGEMENT AS,0.6,1,True,2025Q3,2025Q4,1456670,1685676
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),"Amida Capital Management II, LLC","Foresite Capital Management II, LLC",0.6,2,False,2014Q2,2014Q4,1427356,1594912
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),"Charter Bridge Capital Management, L.P.",Bridge Creek Capital Management LLC,0.6,2,False,2015Q2,2015Q4,1533321,1670903
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),OAKWOOD CAPITAL MANAGEMENT LLC/CA,Morton Capital Management LLC/CA,0.6,2,False,2021Q2,2021Q4,1077148,2002628
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),ABERDEEN ASSET MANAGEMENT PLC/UK,Melqart Asset Management (UK) Ltd,0.6,2,False,2017Q2,2017Q4,1080434,1712901
+S,DUVIDA,adjudicado: nucleo do nome continua (rename/reorganizacao),BREMER TRUST NATIONAL ASSOCIATION,Bremer Bank National Association,0.6,2,False,2018Q3,2019Q1,1086555,1775321
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),Investors Capital Advisory Services,"Capital Investment Advisory Services, LLC",0.6,2,False,2016Q2,2016Q4,1427271,1659203
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),FIRST UNITED BANK TRUST/,First International Bank & Trust,0.6,2,False,2021Q2,2021Q4,1214183,1910370
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),"FIRST REPUBLIC INVESTMENT MANAGEMENT, INC.",Client First Investment Management LLC,0.6,2,False,2023Q2,2023Q4,1418204,2018284
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),"Lane Five Capital Management, LP","Plymouth Lane Capital Management, LLC",0.6,2,False,2014Q2,2014Q4,1410352,1596882
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),"Advocacy Wealth Management Services, LLC","CFG Wealth Management Services, Inc.",0.6,2,False,2025Q2,2025Q4,1569452,2133547
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),"Yost Capital Management, L.L.C.","NovaQuest Capital Management, L.L.C.",0.6,2,False,2017Q2,2017Q4,1489859,1729264
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),"Yost Capital Management, L.L.C.","JAYHAWK CAPITAL MANAGEMENT, L.L.C.",0.6,2,False,2017Q2,2017Q4,1489859,1002078
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),"NovaQuest Capital Management, L.L.C.","Farallon Capital Management, L.L.C.",0.6,2,False,2020Q3,2021Q1,1729264,909661
+S,DUVIDA,adjudicado: nucleo do nome continua (rename/reorganizacao),EnTrust Global Partners Offshore LP,ENTRUST GLOBAL PARTNERS L L C,0.6,2,False,2020Q2,2020Q4,1727111,1080818
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),"FirstMark Capital OF II GP, LLC","H Capital II GP, L.P.",0.6,2,False,2021Q3,2022Q1,1845708,1912547
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),Quaero Capital S.A.,Fundamenta Capital S.A.,0.6,2,False,2025Q2,2025Q4,1843510,2088289
+S,DUVIDA,adjudicado: nucleo do nome continua (rename/reorganizacao),Tyler-Stone Wealth Management,STONE LOFT WEALTH MANAGEMENT LLC,0.6,2,False,2025Q2,2025Q4,1912584,2130930
+N,DUVIDA,DUVIDA nao resolvida -> N conservador (merge errado e pior que faltante),BLACK POINT WEALTH MANAGEMENT,"High Point Wealth Management, LLC",0.6,2,False,2025Q2,2025Q4,2032846,2106882
+N,N,"marcador de safra/veiculo difere (II, Co-Investors, Fund N) = veiculo irmao, nao sucessao","EnCap Energy Capital Fund VIII Co-Investors, L.P.","ENCAP ENERGY CAPITAL FUND VIII, L.P.",0.833,1,True,2017Q1,2017Q2,1537403,1504103
+N,N,"marcador de safra/veiculo difere (II, Co-Investors, Fund N) = veiculo irmao, nao sucessao","Encap Energy Capital Fund  VIII, L.P.","ENCAP ENERGY CAPITAL FUND VIII CO-INVESTORS, L.P.",0.833,2,False,2016Q4,2017Q2,1504103,1537403
+N,N,"marcador de safra/veiculo difere (II, Co-Investors, Fund N) = veiculo irmao, nao sucessao","PATRIOT FINANCIAL PARTNERS GP, LP","Patriot Financial Partners GP II, L.P.",0.8,1,True,2025Q2,2025Q3,1470261,2061817
+N,N,"marcador de safra/veiculo difere (II, Co-Investors, Fund N) = veiculo irmao, nao sucessao",Spark Growth Management Partners LLC,"Spark Growth Management Partners II, LLC",0.8,1,True,2020Q3,2020Q4,1608856,1846116
+N,N,"marcador de safra/veiculo difere (II, Co-Investors, Fund N) = veiculo irmao, nao sucessao",ADVISOR PARTNERS LLC,"ADVISOR PARTNERS II, LLC",0.667,1,True,2022Q2,2022Q3,1456114,1954015
+N,N,"marcador de safra/veiculo difere (II, Co-Investors, Fund N) = veiculo irmao, nao sucessao",RRJ Capital Ltd,RRJ CAPITAL II LTD,0.667,1,True,2014Q1,2014Q2,1529337,1599961
+N,N,"marcador de safra/veiculo difere (II, Co-Investors, Fund N) = veiculo irmao, nao sucessao",RRJ Capital II Ltd,RRJ CAPITAL LTD,0.667,1,True,2014Q1,2014Q2,1599961,1529337
+N,N,"marcador de safra/veiculo difere (II, Co-Investors, Fund N) = veiculo irmao, nao sucessao","G.F.W. Energy X, L.P.","G.F.W. Energy XII, L.P.",0.667,1,True,2020Q4,2021Q1,1555496,1860989
+N,N,"marcador de safra/veiculo difere (II, Co-Investors, Fund N) = veiculo irmao, nao sucessao","H&F Corporate Investors VII, Ltd.","H&F Corporate Investors IX, Ltd.",0.667,1,True,2022Q3,2022Q4,1660963,1767564
+N,N,"marcador de safra/veiculo difere (II, Co-Investors, Fund N) = veiculo irmao, nao sucessao","Formation8 GP II, LLC","Formation8 GP, LLC",0.667,1,True,2020Q3,2020Q4,1620133,1835718
+N,N,"marcador de safra/veiculo difere (II, Co-Investors, Fund N) = veiculo irmao, nao sucessao",Accel X Associates L.L.C.,Accel XI Associates L.L.C.,0.6,1,True,2020Q3,2020Q4,1494996,1535603
+N,N,"marcador de safra/veiculo difere (II, Co-Investors, Fund N) = veiculo irmao, nao sucessao",NORWEST VENTURE PARTNERS X L P,"Norwest Venture Partners XII, LP",0.6,1,True,2019Q3,2019Q4,1361181,1614660
+N,N,"marcador de safra/veiculo difere (II, Co-Investors, Fund N) = veiculo irmao, nao sucessao","Yorktown Energy Partners VII, L.P.","YORKTOWN ENERGY PARTNERS IX, L.P.",0.6,1,True,2022Q3,2022Q4,1423080,1503466
+N,N,"marcador de safra/veiculo difere (II, Co-Investors, Fund N) = veiculo irmao, nao sucessao",Yorktown Energy Partners VI LP,YORKTOWN ENERGY PARTNERS V LP,0.6,1,True,2021Q3,2021Q4,1347504,1210407
+N,N,"marcador de safra/veiculo difere (II, Co-Investors, Fund N) = veiculo irmao, nao sucessao",Index Venture Associates IV Ltd,Index Venture Associates III Ltd,0.6,1,True,2020Q3,2020Q4,1447962,1503683
+N,N,"marcador de safra/veiculo difere (II, Co-Investors, Fund N) = veiculo irmao, nao sucessao",Maveron General Partner IV LLC,"Maveron General Partner V, LLC",0.6,2,False,2022Q3,2023Q1,1591048,1594675
+N,N,"marcador de safra/veiculo difere (II, Co-Investors, Fund N) = veiculo irmao, nao sucessao",NORWEST VENTURE PARTNERS X L P,"NORWEST VENTURE PARTNERS XI, LP",0.6,2,False,2019Q3,2020Q1,1361181,1534522
+N,N,"marcador de safra/veiculo difere (II, Co-Investors, Fund N) = veiculo irmao, nao sucessao",NORWEST VENTURE PARTNERS X L P,"NORWEST VENTURE PARTNERS XII, LP",0.6,2,False,2019Q3,2020Q1,1361181,1614660
+N,N,"marcador de safra/veiculo difere (II, Co-Investors, Fund N) = veiculo irmao, nao sucessao","YORKTOWN ENERGY PARTNERS X, L.P.",Yorktown Energy Partners VI LP,0.6,2,False,2017Q2,2017Q4,1577919,1347504
+S,S,"mesmo nucleo, so sufixo societario mudou; handoff nao-limpo/gap 2q - conferir",CHUBB CORP,Chubb Ltd,1.0,2,False,2015Q4,2016Q2,20171,896159
+S,S,"mesmo nucleo, so sufixo societario mudou; handoff nao-limpo/gap 2q - conferir","DAI ICHI LIFE INSURANCE CO., LTD.","Dai-Ichi Life Insurance Company, Ltd",1.0,2,False,2016Q2,2016Q4,948518,1697728
+S,S,"mesmo nucleo, so sufixo societario mudou; handoff nao-limpo/gap 2q - conferir","Financial Architects, Inc","Financial Architects, LLC",1.0,2,False,2023Q2,2023Q4,1416692,2008540
+S,S,"mesmo nucleo, so sufixo societario mudou; handoff nao-limpo/gap 2q - conferir","Commonwealth Equity Services, Inc","COMMONWEALTH EQUITY SERVICES, LLC",1.0,2,False,2017Q3,2018Q1,1333978,312272
+S,S,"mesmo nucleo, so sufixo societario mudou; handoff nao-limpo/gap 2q - conferir",Silver Rock Financial LLC,Silver Rock Financial LP,1.0,2,False,2016Q2,2016Q4,1599350,1674784
+S,S,"mesmo nucleo, so sufixo societario mudou",ISRAEL DISCOUNT BANK OF NEW YORK /GFN,Israel Discount Bank of New York,0.833,1,True,2016Q4,2017Q1,824334,1706511
+S,S,"mesmo nucleo, so sufixo societario mudou","Sound View Wealth Advisors, LLC","Sound View Wealth Advisors Group, LLC",0.8,1,True,2019Q1,2019Q2,1767243,1784777
+S,S,nucleo contido no outro (adicao de Group/Holding/local),Cardinal Point Wealth Management LLC,"Cardinal Point Wealth Management Partners, LLC",0.8,1,True,2021Q3,2021Q4,1869778,1909054
+S,S,"mesmo nucleo, so sufixo societario mudou",RITTER DANIHER FINANCIAL ADVISORY LLC,Ritter Daniher Financial Advisory LLC / DE,0.8,1,True,2022Q1,2022Q2,1844428,1936603
+S,S,"mesmo nucleo, so sufixo societario mudou; handoff nao-limpo/gap 2q - conferir",AMERICAN NATIONAL BANK & TRUST CO /VA/,AMERICAN NATIONAL BANK & TRUST,0.8,2,False,2024Q1,2024Q3,939835,1272164
+S,S,nucleo contido no outro (adicao de Group/Holding/local),"Dai-ichi Life Holdings, Inc.",Dai-ichi Life International Holdings LLC,0.8,2,False,2025Q3,2026Q1,948518,1977663
+S,S,"mesmo nucleo, so sufixo societario mudou; handoff nao-limpo/gap 2q - conferir","RITTER DANIHER FINANCIAL ADVISORY, LLC",Ritter Daniher Financial Advisory LLC / DE,0.8,2,False,2021Q4,2022Q2,1844428,1936603
+S,S,"mesmo nucleo, so sufixo societario mudou",Impax Asset Management LTD,Impax Asset Management Group plc,0.75,1,True,2018Q2,2018Q3,1428948,1749768
+S,S,"mesmo nucleo, so sufixo societario mudou",HOWARD CAPITAL MANAGEMENT,"Howard Capital Management Group, LLC",0.75,1,True,2020Q4,2021Q1,1078658,1860501
+S,S,nucleo contido no outro (adicao de Group/Holding/local),Knott David M,Knott David M Jr,0.75,1,True,2021Q3,2021Q4,808722,1892770
+S,S,"mesmo nucleo, so sufixo societario mudou",Odey Asset Management Group Ltd,Odey Asset Management LLP,0.75,1,True,2023Q1,2023Q2,1512596,1512842
+S,S,"mesmo nucleo, so sufixo societario mudou",CHARTWELL INVESTMENT PARTNERS/PA,"CHARTWELL INVESTMENT PARTNERS, INC.",0.75,1,True,2014Q1,2014Q2,1044516,1616525
+S,S,"mesmo nucleo, so sufixo societario mudou",KEYWISE CAPITAL MANAGEMENT Ltd,KEYWISE CAPITAL MANAGEMENT (HK) Ltd,0.75,1,True,2019Q3,2019Q4,1473434,1474069
+S,S,nucleo contido no outro (adicao de Group/Holding/local),"Kovitz Investment Group, LLC","Kovitz Investment Group Partners, LLC",0.75,1,True,2015Q4,2016Q1,1296434,1665198
+S,S,"mesmo nucleo, so sufixo societario mudou","Relative Value Partners, LLC","Relative Value Partners Group, LLC",0.75,1,True,2015Q1,2015Q2,1356223,1649910
+S,S,nucleo contido no outro (adicao de Group/Holding/local),"Mariner Wealth Advisors, LLC","Mariner Wealth Advisors-Cincinnati, LLC",0.75,1,True,2017Q4,2018Q1,1373442,1567390
+S,S,nucleo contido no outro (adicao de Group/Holding/local),Myriad Asset Management Ltd.,Myriad Asset Management US LP,0.75,1,True,2022Q1,2022Q2,1541349,1857187
+S,S,"mesmo nucleo, so sufixo societario mudou","ARS Wealth Advisors, LLC","ARS Wealth Advisors Group, LLC",0.75,1,True,2021Q2,2021Q3,1843747,1886707
+S,S,"mesmo nucleo, so sufixo societario mudou","Kavar Capital Partners, LLC","KAVAR CAPITAL PARTNERS GROUP, LLC",0.75,1,True,2020Q3,2020Q4,1758087,1841766
+S,S,"mesmo nucleo, so sufixo societario mudou","SONORA INVESTMENT MANAGEMENT, LLC","Sonora Investment Management Group, LLC",0.75,1,True,2021Q3,2021Q4,1418539,1907552
+S,S,"mesmo nucleo, so sufixo societario mudou",IMPAX ASSET MANAGEMENT LLC,Impax Asset Management Group plc,0.75,1,True,2018Q2,2018Q3,1127990,1749768
+S,S,nucleo contido no outro (adicao de Group/Holding/local),Pinpoint Asset Management Ltd,Pinpoint Asset Management (Singapore) Pte. Ltd.,0.75,1,True,2025Q1,2025Q2,1803237,2080247
+S,S,"mesmo nucleo, so sufixo societario mudou",PICTET ASSET MANAGEMENT SA,Pictet Asset Management Holding SA,0.75,1,True,2023Q2,2023Q3,1361570,1993888
+S,S,nucleo contido no outro (adicao de Group/Holding/local),"Long Path Partners Fund, LP",Long Path Partners LP,0.75,1,True,2022Q1,2022Q2,1751978,1905112
+S,S,nucleo contido no outro (adicao de Group/Holding/local),"Polaris Greystone Financial Group, LLC","Greystone Financial Group, LLC",0.75,2,False,2020Q2,2020Q4,1582968,1845302
+S,S,nucleo contido no outro (adicao de Group/Holding/local),Parus Finance SA,PARUS FINANCE (UK) Ltd,0.667,1,True,2012Q2,2012Q3,1611520,1611519
+S,S,nucleo contido no outro (adicao de Group/Holding/local),BRINKER CAPITAL INC,"Brinker Capital Investments, LLC",0.667,1,True,2020Q2,2020Q3,1502976,1360533
+S,S,nucleo contido no outro (adicao de Group/Holding/local),EGERTON CAPITAL LTD,Egerton Capital (UK) LLP,0.667,1,True,2013Q2,2013Q3,1083657,1581811
+S,S,nucleo contido no outro (adicao de Group/Holding/local),JANA PARTNERS LLC,"JANA Partners Management, LP",0.667,1,True,2023Q2,2023Q3,1159159,1998597
+S,S,"mesmo nucleo, so sufixo societario mudou",Polar Capital LLP,Polar Capital Holdings Plc,0.667,1,True,2020Q3,2020Q4,1439303,1837309
+S,S,nucleo contido no outro (adicao de Group/Holding/local),OMNI PARTNERS LLP,Omni Partners US LLC,0.667,1,True,2021Q1,2021Q2,1576497,1800081
+S,S,nucleo contido no outro (adicao de Group/Holding/local),Ferox Capital Management LP,Ferox Capital LLP,0.667,1,True,2020Q1,2020Q2,1343232,1343231
+S,S,"mesmo nucleo, so sufixo societario mudou","Carnick & Kubik, LLC","Carnick & Kubik Group, LLC",0.667,1,True,2016Q1,2016Q2,1555900,1682266
+S,S,nucleo contido no outro (adicao de Group/Holding/local),ISZO CAPITAL LP,ISZO CAPITAL MANAGEMENT LP,0.667,1,True,2013Q4,2014Q1,1484190,1607925
+S,S,nucleo contido no outro (adicao de Group/Holding/local),"CCMP Capital, LLC","CCMP Capital GP, LLC",0.667,1,True,2015Q4,2016Q1,1372939,1674350
+S,S,nucleo contido no outro (adicao de Group/Holding/local),"Keel Point Advisors, LLC","Keel Point, LLC",0.667,1,True,2014Q4,2015Q1,1633038,1386935
+S,S,"mesmo nucleo, so sufixo societario mudou",CLEARY GULL INC.,Cleary Gull Holdings Inc.,0.667,1,True,2015Q1,2015Q2,1062381,1649776
+S,S,nucleo contido no outro (adicao de Group/Holding/local),Fiduciary Group LLC,"FIDUCIARY FINANCIAL GROUP, LLC",0.667,1,True,2024Q1,2024Q2,1645890,1925420
+S,S,"mesmo nucleo, so sufixo societario mudou","Advisor Group, Inc.","Advisor Group Holdings, Inc.",0.667,1,True,2019Q4,2020Q1,1681115,1677044
+S,S,nucleo contido no outro (adicao de Group/Holding/local),"Foundry Group, LLC","Foundry Group Next, LLC",0.667,1,True,2022Q3,2022Q4,1644978,1965482
+S,S,nucleo contido no outro (adicao de Group/Holding/local),"BBVA USA Bancshares, Inc.",BBVA USA,0.667,1,True,2021Q1,2021Q2,1409775,844928
+S,S,nucleo contido no outro (adicao de Group/Holding/local),"Vector Capital, Ltd.","Vector Capital Management, L.P.",0.667,1,True,2019Q4,2020Q1,1780631,1857418
+S,S,nucleo contido no outro (adicao de Group/Holding/local),"SVB Wealth Advisory, Inc.",SVB WEALTH LLC,0.667,1,True,2021Q4,2022Q1,1806668,1626116
+S,S,nucleo contido no outro (adicao de Group/Holding/local),"FourThought Financial, LLC","FourThought Financial Partners, LLC",0.667,1,True,2022Q3,2022Q4,1865966,1956790
+S,S,"mesmo nucleo, so sufixo societario mudou",CLEAR STREET LLC,Clear Street Group Inc.,0.667,1,True,2025Q2,2025Q3,1708828,1881567
+S,S,nucleo contido no outro (adicao de Group/Holding/local),Sage Partners Ltd,"Pacific Sage Partners, LLC",0.667,1,True,2022Q3,2022Q4,1905278,1936845
+S,S,nucleo contido no outro (adicao de Group/Holding/local),WESTERN FINANCIAL Corp,Western Financial Corp/CA,0.667,1,True,2022Q3,2022Q4,106077,1954480
+S,S,nucleo contido no outro (adicao de Group/Holding/local),ROTHSCHILD INVESTMENT LLC /IL,ROTHSCHILD INVESTMENT LLC,0.667,1,True,2023Q3,2023Q4,1020918,85338
+S,S,"mesmo nucleo, so sufixo societario mudou; handoff nao-limpo/gap 2q - conferir","InterOcean Capital, LLC","InterOcean Capital Group, LLC",0.667,2,False,2020Q2,2020Q4,1537703,1841616
+S,S,nucleo contido no outro (adicao de Group/Holding/local),ROTHSCHILD INVESTMENT CORP /IL,ROTHSCHILD INVESTMENT LLC,0.667,2,False,2023Q2,2023Q4,1020918,85338
+S,S,"mesmo nucleo, so sufixo societario mudou; handoff nao-limpo/gap 2q - conferir","Advisor Group, Inc.","ADVISOR GROUP HOLDINGS, INC.",0.667,2,False,2019Q4,2020Q2,1681115,1677044
+S,S,nucleo contido no outro (adicao de Group/Holding/local),"Keeley-Teton Advisors, LLC","Teton Advisors, LLC",0.667,2,False,2025Q1,2025Q3,1700530,2086025
+S,S,nucleo contido no outro (adicao de Group/Holding/local),"Windsor Financial Group, LLC",Windsor Group LTD,0.667,2,False,2017Q2,2017Q4,1132356,1731713
+S,S,nucleo contido no outro (adicao de Group/Holding/local),WESTERN FINANCIAL CORPORATION,Western Financial Corp/CA,0.667,2,False,2022Q2,2022Q4,106077,1954480
+S,S,nucleo contido no outro (adicao de Group/Holding/local),"KOKUSAI Asset Management Co., Ltd.","Mitsubishi UFJ Kokusai Asset Management Co., Ltd.",0.6,1,True,2015Q2,2015Q3,1466067,1466546
+S,S,nucleo contido no outro (adicao de Group/Holding/local),STRATEGIC WEALTH MANAGEMENT INC /ADV,"Strategic Wealth Management Group, LLC",0.6,1,True,2018Q3,2018Q4,849854,1750403
+S,S,nucleo contido no outro (adicao de Group/Holding/local),"Raymond James Financial Services Advisors, Inc.",RAYMOND JAMES FINANCIAL INC,0.6,1,True,2024Q3,2024Q4,1462284,720005
+S,S,nucleo contido no outro (adicao de Group/Holding/local),HIGHLAND CAPITAL MANAGEMENT LP,"HIGHLAND CAPITAL MANAGEMENT FUND ADVISORS, L.P.",0.6,1,True,2019Q2,2019Q3,1167365,1469877
+S,S,nucleo contido no outro (adicao de Group/Holding/local),Wood Investment Counsel LLC,"OBERMEYER WOOD INVESTMENT COUNSEL, LLLP",0.6,1,True,2014Q3,2014Q4,1569566,1349654
+S,S,nucleo contido no outro (adicao de Group/Holding/local),"Norwest Venture Partners XI, LP","NORWEST VENTURE PARTNERS XII, LP",0.6,1,True,2019Q4,2020Q1,1534522,1614660
+S,S,nucleo contido no outro (adicao de Group/Holding/local),Impax Asset Management (AIFM) Ltd,Impax Asset Management Group plc,0.6,1,True,2018Q2,2018Q3,1634155,1749768
+S,S,nucleo contido no outro (adicao de Group/Holding/local),Greenwoods Asset Management Ltd,Greenwoods Asset Management Hong Kong Ltd.,0.6,1,True,2020Q4,2021Q1,1577133,1848138
+S,S,nucleo contido no outro (adicao de Group/Holding/local),Banco BTG Pactual SA,Banco BTG Pactual S.A.,0.6,1,True,2015Q4,2016Q1,1667109,1536080
+S,S,nucleo contido no outro (adicao de Group/Holding/local),"DAI-ICHI LIFE HOLDINGS, INC.","Dai-Ichi Life Insurance Company, Ltd",0.6,1,True,2016Q3,2016Q4,948518,1697728
+S,S,nucleo contido no outro (adicao de Group/Holding/local),"Institutional Venture Management XV, LLC"," INSTITUTIONAL VENTURE MANAGEMENT XVI, LLC ",0.6,1,True,2024Q4,2025Q1,1640275,1716997
+S,S,nucleo contido no outro (adicao de Group/Holding/local),Ostrum Asset Management,"OSTRUM ASSET MANAGEMENT U.S., LLC",0.6,1,True,2018Q3,2018Q4,1166767,1696259
+S,S,nucleo contido no outro (adicao de Group/Holding/local),Broad Peak Investment Holdings Ltd.,Broad Peak Investment Advisers Pte Ltd,0.6,1,True,2024Q1,2024Q2,1728120,1547349
+S,S,nucleo contido no outro (adicao de Group/Holding/local),"Institutional Venture Management XVI, LLC"," INSTITUTIONAL VENTURE MANAGEMENT XV, LLC",0.6,1,True,2024Q4,2025Q1,1716997,1640275
+S,S,nucleo contido no outro (adicao de Group/Holding/local),"NORWEST VENTURE PARTNERS XI, LP","NORWEST VENTURE PARTNERS XIV, LP",0.6,1,True,2020Q3,2020Q4,1534522,1842721
+S,S,nucleo contido no outro (adicao de Group/Holding/local),"NORWEST VENTURE PARTNERS XII, LP","Norwest Venture Partners XIII, LP",0.6,1,True,2022Q1,2022Q2,1614660,1772583
+S,S,nucleo contido no outro (adicao de Group/Holding/local),"KOKUSAI Asset Management Co., Ltd.","MITSUBISHI UFJ KOKUSAI ASSET MANAGEMENT CO., LTD.",0.6,2,False,2015Q2,2015Q4,1466067,1466546
+S,S,nucleo contido no outro (adicao de Group/Holding/local),ALLIANZ INVESTMENT MANAGEMENT LLC,Allianz Investment Management U.S. LLC,0.6,2,False,2020Q3,2021Q1,1140038,1860935

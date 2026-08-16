@@ -1,0 +1,33 @@
+{
+  "decision_lag_days": 45,
+  "start_quarter": "2013-06-30",
+  "characteristic_min_price": 1.0,
+  "characteristic_min_adv": 100000.0,
+  "min_price": 5.0,
+  "min_adv": 5000000.0,
+  "min_history_days": 252,
+  "min_manager_positions": 15,
+  "min_manager_aum": 100000000.0,
+  "min_factor_coverage": 0.8,
+  "winsor_low": 0.01,
+  "winsor_high": 0.99,
+  "market_cap_floor": 10000000.0,
+  "market_cap_ceiling": 10000000000000.0,
+  "benchmark_cap_winsor": 0.99,
+  "factor_names": [
+    "size",
+    "momentum",
+    "beta",
+    "lowvol",
+    "liquidity"
+  ],
+  "portfolio_quantile": 0.2,
+  "portfolio_min_stocks": 50,
+  "fee_bps": [
+    0,
+    5,
+    10,
+    20
+  ],
+  "borrow_rate": 0.005
+}

@@ -1,0 +1,62 @@
+\section{Limitations and next steps}
+\label{sec:limitations}
+
+\paragraph{Price panel survivorship, measured.} The price vendor
+serves current symbols only, so the panel is conditioned on survival
+to the download date: delisted names are absent for their
+\emph{entire} history (nothing ``dies'' inside a backtest window ---
+we verified that the return construction never drops a live name
+mid-window). We measured the incidence and its signal alignment
+rather than asserting a direction: among universe-eligible
+instruments ($\ge$5 holders), unmapped instruments --- intentionally
+excluded ETFs, share classes, delisted and unresolved names --- are
+$\sim$80\% of line items but $\sim$33\% of value, and their NCB vote
+rate differs from mapped names by $+0.002$ ($0.0223$ vs $0.0201$,
+$t=+2.38$): a $\sim$10\% relative tilt in vote intensity, small but
+not zero, and the honest bound on how signal-selected the tradable
+universe is. The economic direction of the pure-delisting component
+cuts \emph{against} the measured spread: bankruptcies concentrate in
+the no-vote quintile (their absence flatters Q1) while acquisition
+targets concentrate among conviction names and exit at premiums
+(their absence penalizes Q5). CRSP-tier data with
+delisting-inclusive returns resolves both truncations and lifts
+value coverage from 85.4\% to $\sim$98\% --- the single
+highest-value data upgrade.
+
+\paragraph{Coverage residuals.} The identifier-service tail
+($\sim$2--3k small CUSIPs) and a handful of throttled tickers are
+pending ($\to\sim$93\% free); delisted names are structural until
+CRSP.
+
+\paragraph{Sample.} Fifty quarters binds everything inferential: the
+IPCA alpha test is underpowered at this $T$; the funding-beta design
+has two or three informative episodes; the FSS regime finding rests
+on a twenty-quarter window; the hyperparameter surfaces are one draw
+of history each.
+
+\paragraph{Corporate actions.} Splits are handled by the modal-atom
+detector; other corporate actions (mergers, spin-offs, symbol
+recycling) are handled conservatively by fail-closed exclusion
+rather than event-level treatment --- a measured 0.22\%
+contamination of exit flow, documented rather than repaired.
+
+\paragraph{Book visibility.} 13F books are long-only quarterly
+photographs: no shorts, cash, options (excluded by type), or
+intra-quarter turnover. The frozen-book return understates
+dispersion; AUM-based groupings carry leakage.
+
+\paragraph{Next steps, ranked.} (1) CRSP migration (coverage ceiling
+and delisting-inclusive shorts, with corporate-event unification via
+permno); (2) higher-frequency flow and performance data ---
+monthly N-PORT portfolios and Morningstar-tier reported TNA,
+subscriptions/redemptions, and returns --- feeding a probabilistic
+position \emph{nowcast} between filings (gated on beating the
+frozen-book baseline at holdings reconstruction) and re-opening flow
+\emph{prediction} with the instrument the literature actually uses
+(reported flows; implied 13F flow has no forecastable structure),
+with NMF-cluster hierarchical shrinkage for per-manager
+sensitivities; (3) accounting fundamentals and a risk model for
+characteristic-complete residualization and joint false-discovery
+control; (4) short-interest data to sharpen the SSI instrument and
+squeeze guard; (5) a second funding cycle to power the funding-beta
+design.

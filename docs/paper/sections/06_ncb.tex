@@ -1,0 +1,121 @@
+\section{New-Conviction Breadth (NCB)}
+\label{sec:ncb}
+
+\subsection{Mechanism}
+
+A 13F reveals almost nothing about why a position exists --- except
+in one corner. When a manager \emph{opens or materially grows} a
+position that lands in the \emph{top decile of their own book}, the
+filing records an action with three properties: it was expensive
+(top-decile room is made by displacing existing conviction), it was
+deliberate (indexing, rebalancing, and inflows do not create fresh
+top-of-book positions), and it is comparable across managers (each
+book's own weight distribution defines its threshold). NCB counts,
+per stock and quarter, the fraction of filers that took this action:
+
+\[
+\mathrm{NCB}_{i,t} \;=\; \frac{1}{N_t}\,\#\Bigl\{m :\;
+w_{m,i,t}\ \ge\ q_{0.90}(w_{m,\cdot,t}),\;\;
+s_{m,i,t}\ \ge\ 1.25\, f_{i,t}\, s_{m,i,t-1}\Bigr\},
+\]
+
+where $w$ are within-book weights, $s$ share counts, and $f_{i,t}$ a
+per-instrument split factor estimated from the holders themselves:
+the modal share ratio across a stock's continuing holders identifies
+splits exactly (untouched holders' ratios all land on the split
+atom), validated 6/6 on prominent splits. The detector's
+false-positive rate has not been separately audited; its thresholds
+are deliberately conservative (modal ratio at least 15\% away from
+one, held by 10\%+ of continuing holders or 30+ filers with
+$2.5\times$ dominance over the runner-up atom), so the failure mode
+is a missed split --- which surfaces as an outlier position change
+--- rather than a fabricated one. Split adjustment matters
+because unadjusted splits are \emph{differential} contamination ---
+they fabricate ``buys'' precisely in the names that moved most ---
+unlike ETF contamination, which is uniform and measured innocuous
+(Section~\ref{sec:universe}).
+
+The dart-throwing placebo fires for NCB (uninformed value-weighted
+books mechanically open more new positions in large liquid names), so
+the headline is the cross-sectional residual on $\log$ market cap and
+$\log$ dollar ADV, re-ranked. The stock-level universe is every name
+with at least five holders, \emph{including zero-vote names} ---
+evaluating only voted names was an early bug worth recording, since
+the zeros carry the sort's information too.
+
+\subsection{Results and replications}
+
+On the expanded universe, 2013Q3--2025Q4: quintile spread
+$+1.9\%$/quarter, $t=+3.44$, Sharpe $\approx 1.0$, IC $+0.023$.
+Across two universes (pre- and post-coverage-fix) and four
+independent implementations (catalogue spec, standalone module,
+interaction-module replication, engine panel), the $t$-statistic
+lands in a $3.3$--$4.0$ band eight times. These are
+\emph{implementation replications} --- robustness to construction
+and coding choices on the same data, not independent samples --- and
+are claimed as exactly that. The signal survives two random
+50\%-coverage halvings ($t=+3.45/+2.79$). Attribution
+against market, size, momentum, reversal, and illiquidity factors
+leaves the premium intact (the joint Fama--MacBeth $\lambda$ of
+Section~\ref{sec:fm}, $t=+3.04$ holding nine other characteristics,
+is the strictest version of this statement), and no IPCA latent
+factor instrumentable by the ten characteristics absorbs it
+(Section~\ref{sec:ipca}).
+
+\subsection{Hyperparameters: an a-priori spec and a measured surface}
+\label{sec:ncb-surface}
+
+The specification (book-weight quantile $0.90$, growth $1.25$,
+minimum holders $5$) was fixed a priori and was the only combination
+ever run during the research phase --- the eight replications carry
+no tuning bias. A bootstrap-robust selection study in the
+\citet{oliveira2025} protocol then mapped the full $4\times3\times3$
+surface: in-sample 2013--2020, coupled moving-block bootstrap
+(block~4, $B=2{,}000$, common resample indices across configurations),
+selection on the 5th percentile of the bootstrap Sharpe, frozen and
+evaluated 2021--2025. Three findings
+(Figure~\ref{fig:surfaces}, left; full table in
+Appendix~\ref{app:surfaces}):
+
+\begin{enumerate}
+\item \textbf{The surface is uniformly positive out-of-sample}: all
+  36 configurations post OOS Sharpe between $+1.05$ and $+2.53$
+  (every OOS $t \ge 3.2$). The default sits mid-surface; the signal
+  is not fragile to its parameters.
+\item \textbf{The gradient is monotone toward sharper conviction}
+  (higher weight quantile, higher growth bar), in-sample and
+  out-of-sample --- mechanism-consistent, and implying the a-priori
+  default was conservative. The sharper corner is a post-hoc
+  candidate under the funnel rules, not a new specification.
+\item \textbf{An honest null on the selector}: the robust
+  5th-percentile statistic picked the same configuration as the naive
+  in-sample maximum and ranked the OOS ordering slightly worse
+  (rank correlation $+0.41$ vs $+0.53$); at thirty in-sample
+  quarters the percentile tracks the point estimate. The bootstrap's
+  contribution here is distributional context (even the default's 5th
+  percentile is non-negative), not selection.
+\end{enumerate}
+
+\subsection{A machine-learning cross-check that found the same thing}
+\label{sec:ml}
+
+As an ex-post exercise, we trained ridge, $k$-NN, random-forest and
+gradient-boosted regressors on the twelve change-class variables to
+predict the next quarter's market- and size-residualized excess
+return (cross-sectional rank $z$-score target; per-quarter
+winsorize/z-score features; strictly expanding walk-forward). Every
+architecture predicts the size-hedged cross-section out-of-sample
+($t=+2.6$ to $+3.4$ on the residualized target) --- and the exercise
+is a third independent route to the same conclusion: NCB alone beats
+the twelve-variable model ($+3.12\%$/q, $t=+3.50$ vs $+2.45\%$/q,
+$t=+3.18$; paired $t=-1.09$); the prediction is $0.52$
+rank-correlated with NCB; orthogonalized to NCB the model retains
+nothing ($t=+0.40$); and the boosting's own permutation importance
+ranks NCB first by a factor of three. There is no nonlinear premium
+(boosted-minus-ridge paired $t=+0.27$): the linear production model
+of Section~\ref{sec:fm} already extracts what exists. The exercise
+also yields a practical lesson: evaluated on \emph{raw} returns the
+same predictions lose money --- the prediction inherits a small-cap
+exposure from the raw count features, and in a mega-cap regime that
+exposure dominates. Positioning factors must be traded size-hedged;
+NCB's residualized construction does this by design.

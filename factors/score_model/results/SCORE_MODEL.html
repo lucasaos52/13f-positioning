@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Modelo de Score Unificado — E[r] com Clássicos + Posicionamento 13F</title>
+<style>
+  @page { size: A4; margin: 18mm 16mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "Segoe UI", Calibri, sans-serif; font-size: 10.5pt;
+         color: #1a1a2e; line-height: 1.55; margin: 0; }
+  h1 { font-size: 20pt; color: #1e3a5f; border-bottom: 3px solid #1e3a5f;
+       padding-bottom: 6px; margin: 0 0 4px 0; }
+  .subtitle { color: #555; font-size: 11pt; margin-bottom: 18px; }
+  h2 { font-size: 14pt; color: #1e3a5f; border-bottom: 1.5px solid #9ab0c4;
+       padding-bottom: 3px; margin-top: 24px; page-break-after: avoid; }
+  h3 { font-size: 11.5pt; color: #333; margin-top: 16px; page-break-after: avoid; }
+  table { border-collapse: collapse; width: 100%; margin: 10px 0;
+          font-size: 9.3pt; page-break-inside: avoid; }
+  th { background: #1e3a5f; color: #fff; padding: 5px 8px; text-align: left; }
+  td { border: 1px solid #ccc; padding: 4px 8px; }
+  tr:nth-child(even) td { background: #f2f5f8; }
+  .box { background: #eef3f8; border-left: 4px solid #1e3a5f; padding: 9px 13px;
+         margin: 12px 0; page-break-inside: avoid; }
+  .verdict { background: #eef3ee; border-left: 4px solid #3c6e47; }
+  .warn { background: #fdf3f3; border-left: 4px solid #b03030; }
+  code, pre { font-family: Consolas, monospace; font-size: 9pt; background: #f2f2f5; }
+  pre { padding: 9px 12px; border: 1px solid #ddd; border-radius: 3px;
+        overflow-x: auto; page-break-inside: avoid; line-height: 1.45; }
+  .small { font-size: 9pt; color: #555; }
+  .pos { color: #2d6a35; font-weight: 600; }
+  .neg { color: #b03030; font-weight: 600; }
+  ul, ol { margin: 6px 0; padding-left: 22px; }
+  li { margin-bottom: 3px; }
+  .pagebreak { page-break-before: always; }
+</style>
+</head>
+<body>
+
+<h1>Modelo de Score Unificado</h1>
+<div class="subtitle">E[r] por ação combinando características clássicas + sinais de
+posicionamento 13F · três escolas de combinação na mesma régua, OOS estrito ·
+50 trimestres de painel, 38 avaliados · 16 ago 2026</div>
+
+<div class="box"><b>Por que este módulo existe:</b> para construir o portfólio amanhã é
+preciso UM ranking de valor esperado que funda todos os sinais sobreviventes com as
+características clássicas — a perna de alpha de um modelo multifatorial de produção.
+Não é um diagnóstico: é a peça que faltava entre "sinais validados um a um" e "carteira".
+De quebra, a regressão conjunta entrega o teste de marginalidade que a escada FF6
+(nível portfólio, um fator por vez) não consegue dar.</div>
+
+<h2>1. As duas escolas de combinação (e o baseline)</h2>
+<table>
+<tr><th>escola</th><th>como pesa</th><th>força</th><th>fraqueza</th></tr>
+<tr><td><b>A — Fama-MacBeth / Lewellen (2015)</b></td>
+<td>regressão cross-section do retorno futuro nas características a cada data;
+λ̄ histórico vira o vetor de pesos: E[r_i] = λ̄'x_i</td>
+<td>estima prêmios CONJUNTAMENTE — trata correlação entre sinais endogenamente</td>
+<td>paga ruído de estimação quando T é curto</td></tr>
+<tr><td><b>B — Composite IC-weighted (Grinold-Kahn)</b></td>
+<td>peso de cada sinal ∝ IC médio histórico (univariado): E[r_i] = Σ w_k·rank(x_ik)</td>
+<td>robusto, padrão de desk</td><td>ignora sobreposição entre sinais</td></tr>
+<tr><td><b>C — rank-average ingênuo</b></td>
+<td>média de ranks de new_conv + distress(−) — a regra do combo atual</td>
+<td>zero estimação</td><td>pesa 50/50 na ignorância e ignora os clássicos</td></tr>
+</table>
+
+<h2>2. Desenho e travas anti-lookahead</h2>
+<ul>
+<li><b>Preditores pré-registrados (10, nada adicionado depois de ver resultado):</b>
+6 clássicos (size +=small, momentum 12-1, beta, lowvol +=defensivo, reversal 1m,
+liquidez) + 4 sobreviventes 13F (new_conv residualizado — sinal-teorema; dbreadth em
+filers comuns; distress supply; pressure). Tudo em ranks percentis centrados — caudas
+pesadas neutralizadas, mesma razão do protocolo Spearman do projeto inteiro;</li>
+<li><b>Relógio:</b> decisão em D+45, snapshots PIT event-driven (só filings públicos);</li>
+<li><b>OOS estrito:</b> λ_s e IC_s de um trimestre s só entram na decisão do trimestre t
+se s &lt; t (o retorno de s já realizado). Warm-up mínimo de 12 trimestres antes do
+primeiro trade avaliado. Sem re-fit no full sample em nenhum lugar;</li>
+<li><b>Avaliação:</b> quintis EW do E[r], spread Q5−Q1, IC, NW(4); deltas pareados
+entre os três combinadores na mesma amostra.</li>
+</ul>
+
+<h2>3. Resultado 1 — A tabela de marginalidade conjunta (o slide)</h2>
+<p>λ médio full-sample com NW t: o prêmio de cada preditor <b>segurando todos os outros
+nove simultaneamente</b>.</p>
+<table>
+<tr><th>preditor</th><th>λ médio</th><th>t NW</th><th>IC univar.</th><th>t IC</th><th>leitura</th></tr>
+<tr><td><b>new_conv</b></td><td>+0.0213</td><td class="pos">+3.26</td><td>+0.021</td><td>+2.63</td>
+<td><b>prêmio próprio contra as 6 clássicas ao mesmo tempo</b></td></tr>
+<tr><td><b>dbreadth</b></td><td>+0.0172</td><td class="pos">+4.62</td><td>+0.013</td><td>+1.64</td>
+<td>a surpresa: fraco sozinho, forte na conjunta — os controles limpam o ruído dele</td></tr>
+<tr><td>size</td><td>+0.1051</td><td>+4.52</td><td>+0.032</td><td>+2.87</td>
+<td rowspan="2">⚠ par colinear: ranks de size(+small) e liq(+líquido) são fortemente
+anticorrelacionados; os dois λ grandes e positivos formam UM tilt "small-mas-líquido" —
+não ler isoladamente</td></tr>
+<tr><td>liq</td><td>+0.0651</td><td>+3.57</td><td>+0.012</td><td>+0.96</td></tr>
+<tr><td>distress</td><td>+0.0101</td><td class="neg">+1.12</td><td>+0.018</td><td>+1.14</td>
+<td>não sobrevive à conjunta — coerente: vive de estrutura temporal (4 janelas), não de
+cross-section trimestral</td></tr>
+<tr><td>pressure</td><td>+0.0080</td><td class="neg">+1.47</td><td>+0.004</td><td>+0.62</td>
+<td>já havia morrido sozinho (ver autópsia no doc de interações)</td></tr>
+<tr><td>mom</td><td>−0.0129</td><td class="neg">−1.62</td><td>+0.002</td><td>+0.14</td>
+<td rowspan="4">prêmios clássicos fracos/negativos em 2013–2026 — consistente com a
+literatura recente do período</td></tr>
+<tr><td>lowvol</td><td>−0.0297</td><td>−1.11</td><td>−0.001</td><td>−0.03</td></tr>
+<tr><td>strev</td><td>−0.0060</td><td>−0.51</td><td>−0.002</td><td>−0.11</td></tr>
+<tr><td>beta</td><td>−0.0071</td><td>−0.72</td><td>+0.025</td><td>+1.42</td></tr>
+</table>
+<div class="box verdict"><b>A frase de defesa:</b> "new_conviction e dbreadth carregam
+prêmio marginal com t &gt; 3 numa Fama-MacBeth conjunta contra size, momentum, beta,
+vol, reversal e liquidez — os sinais 13F não são característica clássica requentada."
+É a resposta que a escada FF6 não dá: lá o controle é um fator por vez no nível
+portfólio; aqui é tudo ao mesmo tempo no nível ação.</div>
+
+<h2>4. Resultado 2 — A corrida dos combinadores (38 tri OOS)</h2>
+<table>
+<tr><th>combinador</th><th>spread/tri</th><th>t NW</th><th>Sharpe (bruto)</th><th>IC</th></tr>
+<tr><td><b>A — Fama-MacBeth/Lewellen</b></td><td><b>+5.96%</b></td><td>+2.86</td>
+<td><b>0.95</b></td><td>+0.030</td></tr>
+<tr><td>B — IC-weighted</td><td>+4.47%</td><td>+2.39</td><td>0.83</td><td>+0.022</td></tr>
+<tr><td>C — rank-average (regra do combo)</td><td>+2.98%</td><td>+2.59</td><td>0.90</td><td>+0.002</td></tr>
+</table>
+<ul>
+<li>delta A vs B: +1.48%/tri (t=+2.10) — A ganha da escola univariada;</li>
+<li>delta A vs C: +2.98%/tri (t=+1.81) — sugestivo, não conclusivo;</li>
+<li>delta B vs C: +1.50%/tri (t=+0.98).</li>
+</ul>
+<div class="box"><b>Previsão registrada e falsificada (honestidade de processo):</b>
+a previsão pré-declarada era "pesos simples (B/C) ganham de pesos estimados (A) com
+T≈50" — o resultado padrão da literatura (DeMiguel 1/N). Os dados disseram o contrário:
+A venceu. Registrado antes, testado, revertido — é assim que previsão funciona num
+funil; o desenho não muda por causa do palpite de quem desenha.</div>
+
+<h2>5. Os três caveats antes de embarcar o A</h2>
+<ol>
+<li><b>O E[r] do A é dominado pelos clássicos.</b> λ de size/liq (0.105/0.065) são
+5–8× os λ dos sinais 13F (0.021/0.017): parte relevante do spread é colheita de prêmio
+de característica, não posicionamento. Legítimo para um modelo de produção — o mandato
+é E[r], não pureza 13F — mas muda o pitch: <b>A é um multifator com overlay 13F</b>,
+não "o fator 13F";</li>
+<li><b>A vantagem sobre o baseline é sugestiva</b> (t=+1.81), não Bonferroni-proof;</li>
+<li><b>Tudo aqui é régua de triagem</b> — spread bruto de event-study, sem custos,
+sem borrow, sem rebalance real. Retenção histórica triagem→produção no projeto: ~2/3.</li>
+</ol>
+<div class="box warn"><b>O gate que decide:</b> rodar o ranking A na suite de produção
+(fees 5bps, borrow diário, rebal nas datas de decisão, universo Filters) contra o combo
+atual (0.80 líquido). A vs C <b>líquido</b> é a comparação que escolhe o modelo que
+embarca. Até lá, o A é o candidato — não o titular.</div>
+
+<h2>6. Onde está cada coisa</h2>
+<ul class="small">
+<li><code>factors/score_model/run_score.py</code> — implementação completa (preditores
+pré-registrados no topo, travas OOS comentadas);</li>
+<li><code>results/lambdas.csv</code> — série temporal completa dos λ por preditor;</li>
+<li><code>results/race_events.csv</code> — spreads/ICs por trimestre dos 3 combinadores;</li>
+<li><code>results/SCORE_REPORT.md</code> — relatório com veredito;</li>
+<li>Contexto dos sinais 13F usados: <code>docs/FATORES_CLASSICOS_E_INTERACOES.pdf</code>
+(construções, validações e autópsias) e <code>docs/CONCLUSOES_13F.pdf</code> (funil geral).</li>
+</ul>
+
+<p class="small">Referências: Lewellen (2015), The Cross-Section of Expected Stock
+Returns, Critical Finance Review · Grinold &amp; Kahn, Active Portfolio Management ·
+Fama &amp; MacBeth (1973) · DeMiguel, Garlappi &amp; Uppal (2009), Optimal Versus
+Naive Diversification.</p>
+
+</body>
+</html>

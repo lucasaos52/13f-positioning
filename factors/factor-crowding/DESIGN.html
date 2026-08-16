@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>factor-crowding — Nota de desenho</title>
+<style>
+  @page { size: A4; margin: 20mm 17mm; }
+  body { font-family: Georgia, serif; font-size: 10.5pt; line-height: 1.45;
+         color: #1a1a1a; max-width: 176mm; margin: auto; }
+  h1 { font-size: 18pt; margin: 0 0 1mm 0; }
+  h2 { font-size: 13.5pt; border-bottom: 2px solid #14456b; padding-bottom: 1mm;
+       margin-top: 8mm; color: #14456b; page-break-after: avoid; }
+  h3 { font-size: 11.5pt; margin-top: 5mm; page-break-after: avoid; }
+  .subtitle { color: #555; margin-bottom: 6mm; font-size: 11pt; }
+  table { border-collapse: collapse; width: 100%; margin: 3mm 0; font-size: 9pt;
+          page-break-inside: avoid; }
+  th { background: #14456b; color: #fff; padding: 1.6mm 2mm; text-align: left; }
+  td { border-bottom: 1px solid #ccc; padding: 1.4mm 2mm; vertical-align: top; }
+  tr:nth-child(even) td { background: #f4f6f8; }
+  .box { background: #eef3f7; border-left: 4px solid #14456b; padding: 3mm 4mm;
+         margin: 4mm 0; page-break-inside: avoid; }
+  pre { font-family: Consolas, monospace; font-size: 8.6pt; background: #f4f4f4;
+        border: 1px solid #ddd; padding: 3mm; white-space: pre-wrap;
+        page-break-inside: avoid; }
+  code { font-family: Consolas, monospace; font-size: 9pt; background: #eee; padding: 0 1mm; }
+  .kill { color: #a01818; font-weight: bold; }
+  .small { font-size: 8.5pt; color: #555; }
+</style>
+</head>
+<body>
+
+<h1>factor-crowding</h1>
+<div class="subtitle">Do posicionamento por ação ao posicionamento por FATOR — nota de desenho estruturada<br>
+<span class="small">Construída sobre a infraestrutura e as lições do projeto 13F · agosto/2026</span></div>
+
+<h2>0. O programa em uma figura</h2>
+<pre>CAMADA 1 — CENSO (13F, trimestral, filed_date)
+  exposição fatorial agregada dos gestores → quão crowded está cada FATOR
+      │
+CAMADA 2 — NOWCAST (retornos diários, entre divulgações)
+  correlação intra-fator (comomentum) → o crowding "ao vivo", calibrado no censo
+      │
+CAMADA 3 — SINAIS (4, com direção pré-registrada)
+  S1 nível de crowding → RISCO/cauda do fator (defensivo)
+  S2 Δcrowding (fluxo PARA o fator) → continuação
+  S3 gatilho de unwinding (evento, só de-risk)
+  S4 dispersão de correlação intra-perna → seleção de nomes (a aposta principal)</pre>
+
+<div class="box"><b>A resposta ao problema central levantado</b> ("não consigo inferir nada entre duas divulgações"): o censo dá o nível verdadeiro trimestral; a correlação de retornos dá o pulso diário; <b>a calibração de um contra o outro é a máquina da âncora do nowcasting (X3), aplicada a fatores</b> — inclusive com atualização filing a filing pela borda irregular.</div>
+
+<h2>1. Por que é viável agora — tudo que já existe</h2>
+<table>
+<tr><th>Peça</th><th>Onde está</th></tr>
+<tr><td>Exposições fatoriais por ação (B: size, mom, beta, vol, iliq — PIT trailing)</td><td>drift_fluxo_rotacao ✅</td></tr>
+<tr><td>Decomposição do book em fator (BΓ) vs nome (Δ⊥) por gestor</td><td>DFR, validada ✅</td></tr>
+<tr><td>Fatores-portfólio com retornos diários</td><td>factors/run_demo ✅</td></tr>
+<tr><td>Capacidade de cesta (days-ADV de portfólio)</td><td>máquina do NMF ✅</td></tr>
+<tr><td>Fluxo implícito/estresse por gestor</td><td>fire_calendar (t=+13,8) ✅</td></tr>
+<tr><td>Relógio PIT + borda irregular calibrável</td><td>base + âncora X3 ✅</td></tr>
+<tr><td>Motor com rebal em datas ARBITRÁRIAS (event-driven cabe SIM: <code>rebalance(idxs)</code> aceita qualquer vetor — o receio de "não dar pra usar a estrutura" é infundado)</td><td>factors/portfolio ✅</td></tr>
+</table>
+<p><b>O que falta e vira decisão de escopo</b>: value/quality com história longa (fundamentals grátis ≈ 2019+). v1 = 5 fatores canônicos com 12 anos (size, momentum, beta, low-vol, iliquidez); value/quality como extensão declarada.</p>
+
+<h2>2. Literatura — reivindicado vs aberto</h2>
+<table>
+<tr><th>Trabalho</th><th>O que fizeram</th><th>Relação com as ideias</th></tr>
+<tr><td><b>Lou &amp; Polk — Comomentum (RFS 2022)</b></td><td>correlação intra-perna de momentum = proxy de arbitragem crowded; alta → retorno futuro pior e cauda pior</td><td>é EXATAMENTE a ideia da correlação entre divulgações. Publicada — vira a Camada 2, citada</td></tr>
+<tr><td><b>MSCI Integrated Factor Crowding Model</b></td><td>produto comercial diário multi-métrica (valuation spread, correlação, short interest, holdings)</td><td>prova de demanda; nossa versão = reprodução auditável com censo 13F próprio e PIT real</td></tr>
+<tr><td><b>Barroso et al. (2017)</b></td><td>com 13F: instituições REDUZEM loading em momentum antes de crashes</td><td>valida a ideia 1 (loadings agregados carregam informação) e dá direção ao S2</td></tr>
+<tr><td>EFMA 2022 "Following the crowd"</td><td>crowding de anomalias via 13F</td><td>vizinho do censo; diferenciais nossos: filed_date, capacidade, painéis de medição</td></tr>
+<tr><td>Khandani &amp; Lo (2007)</td><td>quant quake = unwinding coordenado</td><td>mecanismo do S3</td></tr>
+<tr><td>Ehsani &amp; Linnainmaa</td><td>factor momentum</td><td><b>confound obrigatório de TODOS os sinais</b></td></tr>
+<tr><td>Arnott vs Asness (timing de fatores)</td><td>debate: timing por valuation funciona vs é raro</td><td>calibra ceticismo: timing de fator é um cemitério famoso — por isso S4 (cross-section) é a aposta principal</td></tr>
+</table>
+<div class="box"><b>O que parece genuinamente aberto:</b> o PACOTE — censo com relógio PIT real + painéis escolhidos por qualidade de medição + capacidade em days-ADV + nowcast calibrado contra o censo. As peças isoladas têm dono; a montagem auditável não.</div>
+
+<h2>3. Camada 1 — o censo de posicionamento fatorial</h2>
+<h3>3.1 Exposição de cada gestor</h3>
+<pre>x_i = B' w_i^a     (exposição ATIVA do gestor i a cada fator; projeção do DFR)</pre>
+<h3>3.2 A ideia do filtro de gestores, reformulada com a lição do projeto</h3>
+<p>Filtrar por ESPERTEZA destrói sinal (provado 3×). Aqui o filtro é de <b>qualidade de medição</b>: <b>Painel A</b> = alocadores de fator (fração idiossincrática baixa, computável pela decomposição DFR) — books quase-puros de fator, censo limpo; <b>Painel B</b> = stock pickers (exposição fatorial é subproduto). Crowding presente nos DOIS = estrutural; só no A = alocação deliberada. <b>Pré-registro: reportar os dois painéis + todos os filers; a divergência é informação, não escolha de vitrine.</b></p>
+<h3>3.3 As quatro métricas por fator (trimestral, D+50 por filed_date)</h3>
+<table>
+<tr><th>Métrica</th><th>Definição</th><th>Cuidado embutido</th></tr>
+<tr><td>C1 nível</td><td>tilt agregado ponderado por AUM (o censo)</td><td>vs a própria história do fator</td></tr>
+<tr><td>C2 fluxo</td><td>ΔC1 entre censos</td><td>confound: factor momentum</td></tr>
+<tr><td>C3 capacidade</td><td>days-ADV da cesta do fator</td><td>teorema do macaco: ADV no denominador → nunca comparar cross-fator cru</td></tr>
+<tr><td>C4 concentração</td><td>HHI de quem carrega a aposta</td><td>poucos gestores grandes = fragilidade</td></tr>
+</table>
+
+<h2>4. Camada 2 — o nowcast entre divulgações</h2>
+<pre>comovimento_f(t) = correlação média par-a-par (63d) da perna long do fator,
+                   PARCIAL ao mercado (senão mede beta, não crowding)
+calibração:  C1_f(próximo censo) ~ comovimento_f(hoje)   [expansiva, estilo X3]
+bônus: entre D+0 e D+50 o censo PARCIAL dos filers revelados atualiza o
+nowcast filing a filing (máquina X3 pronta)</pre>
+
+<h2>5. Camada 3 — os quatro sinais</h2>
+<div class="box"><b>Aviso estrutural (lição "estado sem seta", paga 3×):</b> crowding NÍVEL não tem direção própria. Cada sinal declara a seta antes; S1 é primariamente RISCO.</div>
+<table>
+<tr><th>Sinal</th><th>Tese e desenho</th><th>Pré-registro</th><th class="kill">Morre se</th></tr>
+<tr><td><b>S1 nível → cauda</b></td><td>fator crowded (C1 alto + C3 apertado + C4 concentrado) tem cauda esquerda pior; uso como OVERLAY de risco no combo 0,80</td><td>vol/drawdown respondem; retorno médio sem previsão forte (teste duplo)</td><td class="kill">nem a cauda responder</td></tr>
+<tr><td><b>S2 Δcrowding → continuação</b></td><td>a lei do projeto: fluxo continua; capital entrando no fator → fator continua</td><td>positivo, APÓS controle de factor momentum</td><td class="kill">não sobreviver ao controle → "factor momentum requentado", escrito assim</td></tr>
+<tr><td><b>S3 gatilho de unwinding</b></td><td>comovimento &gt;2σ vs história EM fator crowded → de-risk N=8 semanas (event-driven via <code>rebalance(idxs)</code>); SÓ vende exposição — a versão "compra o esticado" fica proibida na v1</td><td>~5-10 gatilhos em 12 anos → estudo de eventos com IC largo, NUNCA Sharpe</td><td class="kill">é anedótico por construção; reporta-se como tal</td></tr>
+<tr><td><b>S4 dispersão intra-perna</b></td><td>dentro da perna do fator: short os nomes mais correlacionados ao núcleo (detidos "por arbitragem"), long os menos (detidos por mérito próprio) — <b>cross-section com largura real</b> (centenas de nomes × 50 tri)</td><td>protocolo padrão dos 17; residualizar beta/size (correlação é mecânica neles)</td><td class="kill">delta pareado vs fator puro não-positivo</td></tr>
+</table>
+
+<h2>6. Plano de execução</h2>
+<table>
+<tr><th>Fase</th><th>O quê</th><th>Esforço</th><th>Entregável</th></tr>
+<tr><td>F1</td><td>Censo C1-C4 por fator, painéis A/B, 2013-2026</td><td>1 dia</td><td>o placar histórico "quão crowded está cada fator" — valor de memo mesmo sem alfa</td></tr>
+<tr><td>F2</td><td>Nowcast: comovimento parcial + calibração vs censo</td><td>1 dia</td><td>curva de acumulação fator-nível (estilo X3)</td></tr>
+<tr><td>F3</td><td>S2 e S4 no protocolo padrão</td><td>1 dia</td><td>tabelas NW + confound de factor momentum</td></tr>
+<tr><td>F4</td><td>S1 como overlay no combo 0,80</td><td>½ dia</td><td>delta pareado</td></tr>
+<tr><td>F5</td><td>S3 estudo de eventos</td><td>½ dia</td><td>anedotário honesto com IC</td></tr>
+</table>
+<p><b>Valor mínimo garantido</b> = F1+F2: a versão gratuita e auditável do produto da MSCI. Os sinais são upside.</p>
+
+<h2>7. Riscos e lições aplicadas (pré-pagas)</h2>
+<table>
+<tr><th>#</th><th>Risco/lição</th></tr>
+<tr><td>1</td><td>Amostra temporal: 5 fatores × 50 tri — S1/S2/S3 são inferência pobre por construção; só S4 tem breadth</td></tr>
+<tr><td>2</td><td>Estado sem seta (pago 3×): S1 é risco, não retorno</td></tr>
+<tr><td>3</td><td>Factor momentum é o confound de tudo — controle obrigatório</td></tr>
+<tr><td>4</td><td>Teorema do macaco nas métricas: C3 só vs própria história; correlação parcial ao mercado</td></tr>
+<tr><td>5</td><td>Filtro de gestores só como LENTE de medição (painéis A/B juntos) — seleção de espertos já reprovou 3×</td></tr>
+<tr><td>6</td><td>Timing de fatores é um cemitério famoso (Asness) — barra de ceticismo alta; S4 é a aposta principal</td></tr>
+<tr><td>7</td><td>Sem value/quality longos no B — 5 fatores canônicos, extensão 2019+ declarada</td></tr>
+</table>
+
+<h2>8. Critérios de morte globais</h2>
+<p><span class="kill">F1</span>: painéis A/B divergindo sem estrutura (corr ~0) → o censo não mede objeto estável → parar e reportar. <span class="kill">F2</span>: comovimento não prevê o censo seguinte (R²~0) → a Camada 2 cai e os sinais diários morrem juntos. <span class="kill">S1-S4</span>: cada um com kill próprio; nenhum sobrevive por "quase".</p>
+
+<p class="small" style="margin-top:6mm">Fonte estruturada a partir das ideias brutas de 16/08/2026; literatura vetada por busca (Lou-Polk, MSCI, Barroso, EFMA, Khandani-Lo, Ehsani-Linnainmaa, Arnott/Asness); toda a infraestrutura citada existe e está validada no repositório.</p>
+
+</body>
+</html>

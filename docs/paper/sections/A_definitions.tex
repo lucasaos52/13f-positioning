@@ -1,0 +1,40 @@
+\section{Signal definitions}
+\label{app:defs}
+
+\begin{table}[h]
+\centering\scriptsize
+\caption{Quick-reference definitions (per stock, per quarter, unless
+noted).}
+\begin{tabular}{ll}
+\toprule
+signal & definition \\
+\midrule
+NCB & fraction of filers opening/growing ($\ge1.25\times$, split-adj.)
+a top-decile-of-book position; \\
+& residualized on $\log$ mktcap $+$ $\log$ ADV \\
+conviction\_top & fraction of filers holding the stock in their top
+decile \\
+dbreadth / \_common & change in number of holders (all / common
+filers only) \\
+breadth\_level & number of distinct holders (level; residualized) \\
+entry/exit/net\_entry & filers entering / exiting / net, over holders \\
+dio / dio\_2q & change in institutional ownership share (1q / 2q) \\
+pso & proportion of shares outstanding held by filers \\
+days-ADV / $\Delta$ & aggregate 13F position in days of ADV (level /
+change) \\
+ti / vi & turnover / value imbalance of position changes \\
+herf\_holders & holder-concentration Herfindahl (residualized) \\
+late\_minus\_early\_dio & $\Delta$IO of late filers minus early
+filers \\
+pressure & $\sum_m \mathrm{flow}_m \times$ prior position value
+$/\ \mathrm{ADV}$ \\
+FSS & $\sum_{m\in\mathrm{dis}} |\mathrm{flow}_m| \times
+\mathrm{AUM}_m \times w_{m,i} \ /\ \mathrm{ADV}_i$,\quad
+$\mathrm{dis}=\{\mathrm{flow}<-0.10\}$ \\
+SSI & Tobit-inverted latent shorting propensity from the censored 13F
+cross-section \\
+implied flow (manager) & $\mathrm{AUM}_t/\mathrm{AUM}_{t-1} - (1 +
+r^{\text{book}})$ \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,96 @@
+\section{Evaluation protocol and research discipline}
+\label{sec:protocol}
+
+All signal evaluations share one protocol, fixed before any return
+was examined. Decisions at quarter-end $+45$ days (justified in
+Section~\ref{sec:delays}); holdings via the point-in-time store;
+quintile portfolios, equal-weighted primary and value-weighted
+reported; Q5$-$Q1 spreads on forward quarterly returns;
+Newey--West $t$-statistics (4 lags); Spearman rank information
+coefficients; a \$1 price floor; ties broken by seeded random jitter
+(deterministic alphabetical tie-breaking is an artifact generator
+where sorts have mass points at zero). Cumulative-return figures are
+log-scale throughout.
+
+Two statistical conventions are worth stating precisely. Forward
+quarterly returns are \emph{sums of daily simple returns} --- a
+log-return approximation that ignores intra-window compounding. It is
+applied identically on both sides of every sort, so spreads are
+quintile-neutral to the convention; reported levels are mildly
+conservative for high-volatility names. Newey--West with four lags on
+\emph{non-overlapping} quarterly series is deliberately conservative:
+the spreads carry no mechanical overlap, so the correction can only
+widen standard errors against residual autocorrelation and
+volatility clustering.
+
+\paragraph{Why equal weights as the measurement base.}
+The evaluation question is cross-sectional: \emph{does the ranking
+order next-quarter returns?} Under that question every name is one
+observation, so the diagnostic portfolio weights names equally ---
+value-weighting re-asks the question ``does it order returns among
+mega-caps?'', a narrower hypothesis whose spread variance is
+dominated by a handful of names (the effective $N$ collapses, and
+with it the fundamental-law arithmetic $\mathrm{IR}\approx
+\mathrm{IC}\sqrt{N}$ that our signals live on). EW is therefore the
+\emph{measurement} convention and cap-weighting the
+\emph{implementation} convention: the tradability question EW raises
+(small-cap loading) is answered downstream and explicitly --- the
+engine trades a filtered universe with costs
+(Section~\ref{sec:engine}), and the long-only product is built on
+cap weights with a tilt (Section~\ref{sec:lo}). VW variants are
+reported throughout as the bridge.
+
+\paragraph{Ex-ante neutralization: the dart-throwing-manager test.}
+Whether a signal is residualized on size and liquidity is decided by
+a formal placebo, not taste. We simulate value-weighted books held by
+uninformed (``dart-throwing'') managers and ask whether the candidate
+signal's correlation with $\log$ market cap and $\log$ dollar ADV
+arises mechanically in that world. If it does, the headline version
+of the signal is the cross-sectional residual on
+$(\log \mathrm{mktcap}, \log \mathrm{ADV})$, fixed \emph{before}
+looking at returns; if it does not, the raw version is the headline.
+Both versions are always reported. This single rule prevents the two
+symmetric errors --- repackaging a size tilt as information, and
+destroying information by blanket neutralization --- and the
+catalogue delivers one clean exhibit of each. NCB \emph{raw} is
+nothing ($t=-0.9$ equal-weighted): the mechanical large-cap loading
+of a counting signal drags against its information in this
+mega-cap-led sample, and residualization \emph{unmasks} the factor
+($t=+3.5$) rather than manufacturing it --- the residual is not a
+tweak, it is where the signal lives. Days-of-ADV is the mirror
+image: raw it replicates its published value-weighted point
+($+1.46\%$/month), residualized it dies ($t=-0.4$) --- the published
+``crowding effect'' \emph{was} a size/liquidity exposure. One rule,
+two opposite unmaskings, both decided before returns were seen.
+
+\paragraph{Verdicts are paired deltas.}
+Whenever two designs are compared (a filter versus the census, a
+conditioning versus unconditional, combiner A versus B), the verdict
+statistic is the quarter-by-quarter difference on the common sample
+with its own Newey--West $t$ --- never two headline Sharpe ratios
+compared by eye.
+
+\paragraph{Pre-registration and multiplicity.}
+Experiment families declare hypotheses, target cells, expected signs,
+and thresholds in the script docstring before running. Families of
+five tests carry a Bonferroni bar of $|t|\ge 2.57$ (stated with the
+iteration count wherever invoked); results between $1.96$ and the bar
+are labeled suggestive and never promoted. Post-hoc entrants ---
+however well they perform --- are labeled candidates: this rule is
+applied against our own late results, including an IPCA combiner that
+beats the production model's point estimate
+(Section~\ref{sec:ipca}).
+
+\paragraph{Smoke never decides.}
+Short-panel runs exist to catch crashes. Four short-panel mirages
+inverted or vanished on the full panel during this project ---
+including a correlation-triggered stress variant that looked
+excellent in a 10-quarter smoke and inverted at 50 --- so no
+reduced-sample number is ever quoted as evidence.
+
+\paragraph{Loud failure.}
+A parse recovering zero rows against a cover page declaring entries
+is an error, not an empty filing; a missing quarter raises; every
+data-quality decision is counted in a rejection ledger that
+regenerates the data documentation. The same standard applied upward
+produced the retraction of Section~\ref{sec:campaign}.

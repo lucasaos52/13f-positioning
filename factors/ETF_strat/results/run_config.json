@@ -1,0 +1,39 @@
+{
+  "start_period": "2013-09-30",
+  "snapshot_lag_days": 70,
+  "min_manager_book_usd": 100000000.0,
+  "min_manager_positions": 10,
+  "min_manager_return_coverage": 0.5,
+  "min_released_managers": 100,
+  "min_cross_section": 20,
+  "churn_smoothing_quarters": 4,
+  "persistence_cap_quarters": 4,
+  "min_price": 4.0,
+  "min_dollar_volume": 5000000.0,
+  "liquidity_window_days": 63,
+  "min_history_days": 126,
+  "quantile_fraction": 0.2,
+  "primary_cost_bps": 10,
+  "fee_ladder_bps": [
+    0,
+    5,
+    10,
+    20
+  ],
+  "forward_horizons_days": [
+    5,
+    21,
+    63
+  ],
+  "min_full_net_sharpe": 0.5,
+  "min_subperiod_net_sharpe": 0.25,
+  "min_ic_tstat": 1.96,
+  "specific_styles": [
+    "sector",
+    "industry",
+    "country",
+    "factor",
+    "thematic"
+  ],
+  "fingerprint": "014ce7874464"
+}

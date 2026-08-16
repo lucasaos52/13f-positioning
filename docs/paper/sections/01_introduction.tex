@@ -1,0 +1,70 @@
+\section{Introduction}
+\label{sec:intro}
+
+Quarterly 13F filings are the most complete public record of
+institutional equity positioning, and the most heavily mined. The
+literature's box score is mixed by construction: the filings are
+stale (up to 45 days), long-only, and quarterly, so most of what they
+reveal is already in prices. Our starting premise is therefore not
+``institutions know something,'' but a narrower mechanical claim:
+\emph{the filings occasionally reveal actions that were either costly
+to take or impossible to avoid}, and only those actions should carry
+a premium. A manager displacing an existing top-decile position to
+make room for a new name has paid a real price for that opinion; a
+manager liquidating a third of a book under redemptions is not
+expressing an opinion at all. Everything in this report is organized
+around whether a signal isolates one of those two situations.
+
+The work divides into three parts. The first
+(Sections~\ref{sec:data}--\ref{sec:universe}) is data engineering,
+and we give it the space usually reserved for results because in this
+dataset the engineering \emph{is} the result: a bitemporal
+point-in-time store keyed on filing acceptance timestamps; amendment
+semantics read from cover pages rather than guessed; per-filing value
+scale detection; a CUSIP$\to$issuer-name$\to$current-ticker crosswalk
+with human resolution of edge cases; and a value-weighted coverage
+audit that late in the project found 46.4\% of book value unmapped
+--- EDGAR's name abbreviations defeat exact matching precisely on the
+mega-caps --- forcing a fix and a 24-run re-verification campaign in
+which one previously reported result was retracted
+(Section~\ref{sec:campaign}). We report the retraction with its
+mechanism because the episode is the strongest evidence we can offer
+that the rest of the numbers mean something.
+
+The second part (Sections~\ref{sec:taxonomy}--\ref{sec:fss}) is a
+taxonomy: six classes of positioning signals, seventeen catalogue
+constructions evaluated under one fixed protocol, five pre-registered
+interaction effects, and the two survivors. New-Conviction Breadth
+(NCB) counts, per stock, the fraction of filers that opened or grew
+($\ge 25\%$, split-adjusted) a position sitting in the top decile of
+their own book, residualized on size and dollar liquidity because a
+formal placebo (``dart-throwing value-weighted managers'') shows the
+raw count is mechanically correlated with both. Forced-Sale Supply
+(FSS) converts a validated manager-level flow instrument into a
+stock-level supply measure. For each we present the economic
+mechanism first, the returns second, and the hyperparameter surface
+third --- every parameter in this report is either justified by a
+measurement or explicitly labeled a convention.
+
+The third part (Sections~\ref{sec:models}--\ref{sec:limitations})
+assembles the pieces into production objects and stress-tests the
+assembly: a Fama--MacBeth expected-return combiner over ten
+characteristics (the production model), an IPCA challenger under the
+\citet{kps2019} instrumented-loadings framework, a gradient-boosted
+ex-post exercise that rediscovers NCB and finds no nonlinear premium,
+net-of-cost engine results with explicit commission and borrow
+accounting, and the descriptive context --- the median large 13F
+filer underperforms the S\&P~500 by $3.3\%$ per year before fees ---
+that explains why imitating these books is a losing design and
+harvesting their \emph{flows} is not.
+
+Two regularities recur so often that we state them as laws and tag
+every result with them. \textbf{Law 1: states have no arrow.} Levels
+of ownership, breadth, crowding, concentration, or factor tilt never
+predict returns in this data, at any clock, in fifteen independent
+formulations; changes and constrained actions do. \textbf{Law 2:
+distress is information when observed, never when predicted.}
+Contemporaneous forced selling is measurable with $t\approx+10$;
+every attempt to anticipate it --- daily synthetic stress, quarterly
+flow forecasting, single-name crash cascades --- fails its mechanism
+gate or dies on the full panel.

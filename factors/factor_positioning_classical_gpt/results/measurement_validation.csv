@@ -1,0 +1,10 @@
+period_end,book,factor,exposure,passed
+2013-09-30,top_decile_momentum,momentum,2.2501610173214996,True
+2013-09-30,top_decile_size,size,1.6248409768166705,True
+2013-09-30,top_decile_lowvol,lowvol,0.9346434469802741,True
+2019-12-31,top_decile_momentum,momentum,2.1068613779194525,True
+2019-12-31,top_decile_size,size,1.652240386048996,True
+2019-12-31,top_decile_lowvol,lowvol,0.9382111140503244,True
+2026-03-31,top_decile_momentum,momentum,2.3731089376152594,True
+2026-03-31,top_decile_size,size,1.688865007541714,True
+2026-03-31,top_decile_lowvol,lowvol,0.8352947124400657,True

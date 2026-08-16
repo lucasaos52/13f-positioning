@@ -1,0 +1,62 @@
+\section{Latent structure: ICA on flows, NMF on portfolios}
+\label{sec:latent}
+
+\subsection{Why ICA and not PCA, from the data up}
+
+The starting object is a panel: rows are quarters, columns are
+managers, cells are the validated implied flow of that manager in
+that quarter. Individual flows are not independent --- common
+currents run behind them (hedge-fund redemption waves, rotation to
+passive, the 2020 panic) --- and we want the currents separated. The
+situation is the cocktail-party problem: each manager is a microphone
+recording a mixture of conversations, and nobody hands you the
+conversations.
+
+PCA cannot solve it, for a reason worth being precise about. PCA uses
+only covariance, and covariance is blind to \emph{shape}: a steady
+$\pm$ breathing pattern and a silent-then-burst pattern with the same
+variance are identical to it. Worse, for Gaussian-looking data any
+rotation of the true sources reproduces the same covariance, so PCA
+returns an arbitrary rotation --- a way of summing the
+conversations, not the conversations. The current we care about ---
+forced selling --- is precisely the bursty one: quiet for years, then
+one violent quarter. Its signature lives in kurtosis and asymmetry,
+not variance. ICA inverts the central limit theorem: mixing makes
+things more Gaussian, so unmixing means finding the \emph{least}
+Gaussian combinations. A forced-liquidation burst is the least
+Gaussian object in a flow panel.
+
+We extract $K=6$ components with expanding-window FastICA and
+classify each by shape alone --- high kurtosis with low persistence
+$=$ forced; smooth and persistent $=$ allocative --- never touching
+returns in the classification. Three validations discipline the
+construction. \emph{Rotation placebo}: applying the same trading
+logic to variance-preserving rotations of the components (what PCA
+would deliver) destroys the effect --- reversal thesis $t=+1.29$ on
+ICA components versus $-0.77$ rotated; the information lives exactly
+in the shape only ICA preserves. \emph{Unlabeled crises}: the forced
+components' burst quarters land on the taper tantrum, Brexit, and
+COVID without the model ever seeing a calendar. \emph{Stability}:
+the identified subspace persists at 81\% quarter over quarter
+(measured as subspace overlap; components may permute or flip sign
+without anything real changing). The tradable edge is modest and
+reported as modest --- approximately zero net in the engine --- and
+the piece's value is identification: it is the cleanest demonstration
+in the project that a ``sophisticated'' method can be held to placebo
+and stability standards like any signal.
+
+\subsection{NMF latent strategies}
+
+Non-negative matrix factorization of the manager$\times$stock weight
+panel yields components that are themselves long-only portfolios ---
+the honest reason to prefer NMF over PCA/SVD here, since a manager is
+interpretable as a mixture of strategy books but not as a sum of
+axes with negative holdings. $K=10$--$12$ selected by held-out
+manager reconstruction; the structure is stable across the coverage
+expansion. As a crowding predictor the construction fails
+(Section~\ref{sec:laws}; the conditional fragility test returns the
+sign \emph{opposite} to the \citet{greenwood2011} thesis), and its
+retained roles are measurement and clustering: the strategy mixtures
+are the natural pooling groups for hierarchical (James--Stein)
+estimation of per-manager parameters, which is where any future
+flow-forecasting attempt with reported-TNA data would start.

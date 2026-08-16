@@ -1,0 +1,82 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,microtype}
+\usepackage{graphicx,booktabs,longtable,array,multirow}
+\usepackage{amsmath,amssymb}
+\usepackage[hidelinks]{hyperref}
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf}
+\usepackage{natbib}
+\setlength{\parskip}{2pt}
+
+\title{Institutional Positioning from 13F Filings:\\
+Point-in-Time Data Engineering, a Signal Taxonomy,\\
+and What Survived a Pre-Registered Research Funnel}
+\author{Lucas Silva}
+\date{August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent We build a point-in-time research system for SEC 13F
+institutional holdings --- bitemporal storage keyed on filing
+acceptance, amendment semantics from cover pages, a
+CUSIP$\to$name$\to$current-ticker crosswalk with human-in-the-loop
+resolution --- and run a pre-registered research funnel over six
+classes of positioning signals. Two objects survive. The first,
+\emph{New-Conviction Breadth} (NCB): the cross-section of filers
+opening or materially growing top-decile-of-book positions,
+residualized on size and liquidity, earns $+1.9\%$ per quarter in
+quintile spreads ($t=+3.4$, Sharpe $\approx 1.0$), replicates eight
+times across two universes and four implementations, and its full
+$36$-point hyperparameter surface is positive out-of-sample. The
+second, \emph{Forced-Sale Supply} (FSS): managers whose implied flow
+falls below $-10\%$ sell $34.5\%$ of held shares the following quarter
+against $23.1\%$ for healthy managers ($t\approx+10$ at every
+threshold), and the resulting supply basket prices as a
+regime-dependent short. Around these survivors we document, with the
+same protocol, why almost everything else fails: fifteen crowding
+formulations, nine smart-money designs, five pre-registered
+interaction effects, and daily anticipation of institutional stress
+--- one instance of which we retract explicitly after a data-coverage
+audit, and the audit itself (46\% of book value initially unmapped by
+name matching) is presented as a core result. A Fama--MacBeth
+combiner over ten characteristics is the production model (OOS Sharpe
+$0.86$); IPCA and gradient-boosted alternatives are evaluated and
+held at candidate status by the funnel's own promotion rules. Two
+empirical regularities organize every outcome: ownership
+\emph{states} carry no directional information at any clock, and
+alpha lives only where the observed action was \emph{costly}
+(conviction displacement) or \emph{forced} (redemption-driven
+liquidation).
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\input{sections/01_introduction}
+\input{sections/02_data}
+\input{sections/03_universe}
+\input{sections/04_protocol}
+\input{sections/05_taxonomy}
+\input{sections/06_ncb}
+\input{sections/07_fss}
+\input{sections/08_models}
+\input{sections/09_latent}
+\input{sections/10_tactical}
+\input{sections/11_funds}
+\input{sections/12_laws}
+\input{sections/13_limitations}
+
+\bibliographystyle{plainnat}
+\input{sections/99_bibliography}
+
+\appendix
+\input{sections/A_definitions}
+\input{sections/C_compendium}
+\input{sections/B_surfaces}
+
+\end{document}

@@ -1,0 +1,198 @@
+{
+  "run_fingerprint": "0164da7a10ac",
+  "max_rotation_identity_error": 4.440892098500626e-16,
+  "mean_cap_rejected": 49.372549019607845,
+  "bootstrap_10bps_daily_mean": {
+    "flow_continuation": {
+      "mean": 1.7792032280212047e-05,
+      "lo": -0.0006669227107461008,
+      "hi": 0.0007160413740955154
+    },
+    "funding_x_crowding": {
+      "mean": -0.0007566595603372253,
+      "lo": -0.001367275367571264,
+      "hi": -0.00012621793111929639
+    },
+    "static_crowding_placebo": {
+      "mean": 0.00021042240042331035,
+      "lo": -0.0004452492306533811,
+      "hi": 0.0007860786399484531
+    }
+  },
+  "skipped_quarters": [
+    {
+      "period_end": "2013-09-30",
+      "reason": "manager_ramp",
+      "current_managers": 3,
+      "previous_managers": 4
+    },
+    {
+      "period_end": "2013-12-31",
+      "reason": "manager_ramp",
+      "current_managers": 6,
+      "previous_managers": 3
+    },
+    {
+      "period_end": "2014-03-31",
+      "reason": "manager_ramp",
+      "current_managers": 2,
+      "previous_managers": 6
+    },
+    {
+      "period_end": "2014-06-30",
+      "reason": "manager_ramp",
+      "current_managers": 4,
+      "previous_managers": 2
+    },
+    {
+      "period_end": "2014-09-30",
+      "reason": "manager_ramp",
+      "current_managers": 2,
+      "previous_managers": 3
+    },
+    {
+      "period_end": "2014-12-31",
+      "reason": "manager_ramp",
+      "current_managers": 3,
+      "previous_managers": 2
+    },
+    {
+      "period_end": "2015-03-31",
+      "reason": "manager_ramp",
+      "current_managers": 5,
+      "previous_managers": 4
+    },
+    {
+      "period_end": "2015-06-30",
+      "reason": "manager_ramp",
+      "current_managers": 5,
+      "previous_managers": 5
+    },
+    {
+      "period_end": "2015-09-30",
+      "reason": "manager_ramp",
+      "current_managers": 5,
+      "previous_managers": 5
+    },
+    {
+      "period_end": "2015-12-31",
+      "reason": "manager_ramp",
+      "current_managers": 2,
+      "previous_managers": 5
+    },
+    {
+      "period_end": "2016-03-31",
+      "reason": "manager_ramp",
+      "current_managers": 3,
+      "previous_managers": 3
+    },
+    {
+      "period_end": "2016-06-30",
+      "reason": "manager_ramp",
+      "current_managers": 3,
+      "previous_managers": 5
+    },
+    {
+      "period_end": "2016-09-30",
+      "reason": "manager_ramp",
+      "current_managers": 6,
+      "previous_managers": 4
+    },
+    {
+      "period_end": "2016-12-31",
+      "reason": "manager_ramp",
+      "current_managers": 7,
+      "previous_managers": 6
+    },
+    {
+      "period_end": "2017-03-31",
+      "reason": "manager_ramp",
+      "current_managers": 5,
+      "previous_managers": 7
+    },
+    {
+      "period_end": "2017-06-30",
+      "reason": "manager_ramp",
+      "current_managers": 6,
+      "previous_managers": 6
+    },
+    {
+      "period_end": "2017-09-30",
+      "reason": "manager_ramp",
+      "current_managers": 7,
+      "previous_managers": 6
+    },
+    {
+      "period_end": "2017-12-31",
+      "reason": "manager_ramp",
+      "current_managers": 11,
+      "previous_managers": 7
+    },
+    {
+      "period_end": "2018-03-31",
+      "reason": "manager_ramp",
+      "current_managers": 12,
+      "previous_managers": 12
+    },
+    {
+      "period_end": "2018-06-30",
+      "reason": "manager_ramp",
+      "current_managers": 15,
+      "previous_managers": 12
+    },
+    {
+      "period_end": "2018-09-30",
+      "reason": "manager_ramp",
+      "current_managers": 15,
+      "previous_managers": 16
+    },
+    {
+      "period_end": "2018-12-31",
+      "reason": "manager_ramp",
+      "current_managers": 23,
+      "previous_managers": 16
+    },
+    {
+      "period_end": "2019-03-31",
+      "reason": "manager_ramp",
+      "current_managers": 19,
+      "previous_managers": 22
+    },
+    {
+      "period_end": "2019-06-30",
+      "reason": "manager_ramp",
+      "current_managers": 25,
+      "previous_managers": 19
+    },
+    {
+      "period_end": "2019-09-30",
+      "reason": "manager_ramp",
+      "current_managers": 21,
+      "previous_managers": 24
+    },
+    {
+      "period_end": "2019-12-31",
+      "reason": "manager_ramp",
+      "current_managers": 35,
+      "previous_managers": 21
+    },
+    {
+      "period_end": "2020-03-31",
+      "reason": "manager_ramp",
+      "current_managers": 54,
+      "previous_managers": 37
+    },
+    {
+      "period_end": "2021-03-31",
+      "reason": "manager_ramp",
+      "current_managers": 47,
+      "previous_managers": 76
+    }
+  ],
+  "deferred": [
+    "PIT accounting factors",
+    "PIT sectors",
+    "factor stress matrix",
+    "H6 mismatch"
+  ]
+}

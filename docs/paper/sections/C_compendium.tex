@@ -1,0 +1,173 @@
+\section{Module compendium}
+\label{app:compendium}
+
+One block per experiment module: the question, the design choice that
+matters, the numbers, the verdict. Every block corresponds to a
+module directory with its pre-registration in the script docstring
+and a full report on disk.
+
+\paragraph{Signal catalogue (\texttt{general\_predictive\_signals}).}
+\emph{Question:} which positioning transformations carry
+cross-sectional information under one protocol? \emph{Design:}
+headline (raw vs.\ residual) fixed ex ante by the dart-throwing test;
+EW and VW both reported; literature anchor per signal.
+\emph{Numbers:} Table~\ref{tab:catalogue}; NCB leads at $t=+3.54$;
+dio/pso null as published. \emph{Verdict:} one factor, one model
+ingredient, the rest documented nulls consistent with the record.
+
+\paragraph{NCB implementations (\texttt{champion},
+\texttt{new\_positioning}).}
+\emph{Question:} does fresh top-decile conviction predict returns?
+\emph{Design:} votes $=$ opened-or-grown ($\ge1.25\times$,
+split-adjusted) top-decile positions; residualized; full universe
+with zeros. \emph{Numbers:} $t=+3.44$ to $+3.83$ across eight
+replications; Sharpe $\approx 1.0$--$1.1$. \emph{Verdict:} promoted;
+the core factor.
+
+\paragraph{Forced-sale mechanics (\texttt{fire\_calendar}).}
+\emph{Question:} do distressed managers actually sell, and how?
+\emph{Design:} two stages, returns only in stage two; implied flow
+$<-10\%$ defines distress. \emph{Numbers:} sold fraction 34.5\% vs
+23.1\% ($t=+10.6$; strictest contrast $+20.9$); liquidity ordering
+$\approx$ pro rata ($-0.02$). \emph{Verdict:} mechanism validated;
+feeds FSS.
+
+\paragraph{Stop-out exhaustion long (\texttt{stopout}).}
+\emph{Question:} do stocks bounce once a stressed owner finishes
+selling? \emph{Design:} mechanism gate before price; same-crash
+placebo. \emph{Numbers:} gate rate doubles (12.2\% vs 6.7\%,
+$t=+1.62$); thesis$-$placebo CAR$_{5d}$ $t=+0.95$; the continuation
+cell is the significant one ($t=+2.09$ at 10d). \emph{Verdict:} dead
+at the gate; pressure continues.
+
+\paragraph{Daily stress anticipation (\texttt{stress\_short},
+v1--v3).}
+\emph{Question:} can drifted-book synthetic stress front-run the
+short? \emph{Design:} $z(-DD)+z(\mathrm{PainBreadth})>2.0$, 5-day
+hold, calm-manager placebo; ablations on correlation triggers and
+quantile cuts. \emph{Numbers:} $t=-2.16$ (old universe)
+$\to t=+0.37$ (expanded, 49q). \emph{Verdict:} \textbf{retracted}
+--- eligibility-selection artifact; machinery survives in the
+monitors.
+
+\paragraph{Daily monitors (\texttt{daily\_monitor}).}
+\emph{Numbers:} squeeze alarm inverted-useful (alarmed shorts revert
+$-1.21\%$/5d, $t=-2.60$); deleveraging index conditions risk (combo
+Sharpe $0.49\to0.55$, drawdown $-17\to-15\%$); hot-ownership warning
+dead ($t=+0.79$); cover-at-exhaustion dead ($-1.5\%$/q for 7 bps).
+\emph{Verdict:} one anti-panic rule, one conditioner; no new alpha.
+
+\paragraph{Flow forecasting (\texttt{flow\_forecast}).}
+\emph{Question:} is implied flow forecastable one quarter ahead
+(Coval--Stafford construction)? \emph{Design:} expanding
+coefficients; three gates; price gated on mechanism.
+\emph{Numbers:} OOS rank correlation $-0.015$ ($t=-1.21$);
+predicted-distressed don't sell ($t=+0.69$). \emph{Verdict:} dead at
+gate one; Law 2.
+
+\paragraph{Crash cascades (\texttt{cascade}).}
+\emph{Question:} does one position's crash predict fund redemption
+and pressure on its siblings? \emph{Numbers:} middle link $t=-1.47$;
+price null with clean placebo. \emph{Verdict:} gated; the quarterly
+clock is too coarse for this channel.
+
+\paragraph{Funding beta (\texttt{flow\_beta}).}
+\emph{Numbers:} state alone $t=-0.36$ (Law 1); interaction with the
+common shock $t=+0.77$ on 2--3 informative episodes.
+\emph{Verdict:} not yet testable; recorded, not rejected.
+
+\paragraph{Window dressing (\texttt{window\_dressing}).}
+\emph{Numbers:} both pre-registered signs wrong ($+1.58$/$-1.94$);
+permutation placebo follows the thesis; Q4-only reversal $-1.91\%$
+(11 obs). \emph{Verdict:} rejected; year-end anomaly footnoted.
+
+\paragraph{Amendment events (\texttt{restatement\_shock}).}
+\emph{Numbers:} material restatements price \emph{against} the
+correction ($t=-3.52$ at $+3$d, clean placebo); administrative zero;
+reveals' $+10$d drift has a contaminated placebo. \emph{Verdict:}
+pre-registered thesis dead; inverted fact documented.
+
+\paragraph{The clock (\texttt{ragged\_edge}).}
+\emph{Numbers:} per-name entry adds $+0.21\%$/yr long ($t=0.18$),
+$+0.31\%$/yr short ($t=-0.22$). \emph{Verdict:} D+45 approximately
+optimal.
+
+\paragraph{Interactions (\texttt{interactions\_classical}).}
+\emph{Numbers:} five pre-registered conditional effects, none pass
+Bonferroni; best right-sign delta $t=+1.34$; the E4
+pressure$\times$vol flicker fell from $t=+2.06$ to $+0.77$ on fuller
+coverage. \emph{Verdict:} the factor is broad; non-promotion
+vindicated.
+
+\paragraph{Manager factor exposures (\texttt{manager\_factor\_%
+positioning}).}
+\emph{Design:} $E=WX$ with placebo validation; six pre-registered
+hypotheses on crowding dynamics. \emph{Numbers:} validation clean
+(placebo $+0.59\to-0.16$); H3/H4/H5 dead, identical expanded.
+\emph{Verdict:} measurement kept; prediction rejected.
+
+\paragraph{Combiner race (\texttt{score\_model}).}
+\emph{Numbers:} Section~\ref{sec:fm}; FM wins (0.86 research
+protocol); NCB $\lambda\,t=+3.04$ and breadth-change
+$\lambda\,t=+4.01$ jointly. \emph{Verdict:} FM is the measurement
+combiner; its engine decomposition is in Section~\ref{sec:engine}.
+
+\paragraph{IPCA (\texttt{ipca}).}
+\emph{Numbers:} Section~\ref{sec:ipca}; $W_\alpha$ $p=0.41$--$0.59$;
+unrestricted OOS Sharpe 0.97, paired $t=+2.08$ over FM; restricted
+ties. \emph{Verdict:} candidate; the spanning answer stands.
+
+\paragraph{Hyperparameter surfaces (\texttt{champion\_hyperopt},
+\texttt{distress\_hyperopt}).}
+\emph{Numbers:} Appendix~\ref{app:surfaces}. \emph{Verdict:} NCB
+surface uniformly OOS-positive with meaningful selection; FSS
+surface uniform across a regime flip where in-sample selection is
+anti-informative.
+
+\paragraph{Machine-learning cross-check (\texttt{ml\_positioning}).}
+\emph{Numbers:} Section~\ref{sec:ml}; all architectures $t=+2.6$ to
+$+3.4$ on the residualized target; NCB alone beats the model;
+orthogonalized remainder $t=+0.40$; no nonlinearity ($t=+0.27$).
+\emph{Verdict:} the family's sufficient statistic is NCB.
+
+\paragraph{Smart money (\texttt{wbreadth},
+\texttt{universe\_variants}, \texttt{patient\_universe}).}
+\emph{Numbers:} sigmoid weight effect $t=+0.06$; same-electorate
+baseline isolates the confound; filters hurt up to $t=-3.25$; skill
+persistence $0.25$. \emph{Verdict:} family closed at zero for nine.
+
+\paragraph{Passive question (\texttt{champion\_noetf},
+\texttt{champion\_nopassive}, \texttt{follow\_nopassive},
+\texttt{breadth\_universes}).}
+\emph{Numbers:} Section~\ref{sec:universe}; ranking correlation
+$0.974$ after ETF purge; passive removal $+6$ bps. \emph{Verdict:}
+elephants without votes.
+
+\paragraph{Copycat graph (\texttt{copycat}, \texttt{copycat\_pop}).}
+\emph{Numbers:} graph stability 0.94; follower hangover $t=-2.5$;
+popularity window closed. \emph{Verdict:} instrument kept, strategy
+rejected.
+
+\paragraph{Synthetic short interest (\texttt{ssi}).}
+\emph{Numbers:} Tobit inversion; rank correlation with actual short
+interest $0.55$ (from $0.47$ pre-fix). \emph{Verdict:} instrument
+validated; strengthened by better data.
+
+\paragraph{Latent structure (\texttt{ica\_demand},
+\texttt{original\_methods}).}
+\emph{Numbers:} Section~\ref{sec:latent}; rotation placebo
+$+1.29$ vs $-0.77$; stability 81\%; NMF conditional fragility sign
+opposite to thesis. \emph{Verdict:} identification instruments;
+alpha modest and labeled.
+
+\paragraph{Crowding graveyard (\texttt{grafo\_crowding},
+\texttt{absorcao}, \texttt{overhang}).}
+\emph{Numbers:} diffusion thesis wrong sign ($+1.51$); a
+flow-vulnerability centrality variant added nothing over the plain
+size proxy and was dropped; absorption and overhang refinements
+$t=+0.98/-0.05$. \emph{Verdict:} more entries under Law 1.
+
+\paragraph{Fund performance (\texttt{fund\_performance}).}
+\emph{Numbers:} Section~\ref{sec:funds}; median $-3.3\%$/yr before
+fees; IR$>0$ 13\%; persistence $+0.25$. \emph{Verdict:} the
+descriptive base rate behind the smart-money law.

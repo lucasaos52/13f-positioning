@@ -1,0 +1,4 @@
+Symbol|Security Name|Market Category|Test Issue|Financial Status|Round Lot Size|ETF|NextShares
+AAA|Alpha ETF|G|N|N|100|Y|N
+BBB|Beta Inc|Q|N|N|100|N|N
+File Creation Time: 0101202600:00|||||||

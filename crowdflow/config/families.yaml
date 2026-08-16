@@ -1,0 +1,46 @@
+# Manual filer-family overrides.
+#
+# The automatic layer resolves reporting groups from the cover page's
+# <otherManagers> block, which is authoritative but incomplete: it only covers
+# managers a filer reports *for*. It does not capture two situations that
+# matter for a crowding factor.
+#
+#   1. Sibling entities under one investment process that each file their own
+#      13F. Their positions are not duplicates - the dollars are real and
+#      distinct - but they are not independent either, so counting them as two
+#      managers overstates consensus and understates concentration.
+#
+#   2. A filer that lists other managers by name only, with no CIK, which the
+#      union-find cannot follow.
+#
+# Name similarity alone is not evidence: distinct legal entities routinely share
+# a brand, and merging them silently destroys the very independence the factor
+# is trying to measure. So `normalise_name` only *proposes* candidates, and
+# `detect_residual_duplication` only *reports* suspiciously identical rows.
+# Nothing is merged unless it appears here, signed off by a human.
+#
+# Each entry names the family and lists the CIKs that belong to it. All listed
+# CIKs collapse to one filer_id in every quarter.
+#
+# Format:
+#   families:
+#     - name: <family label>
+#       ciks: [<cik>, <cik>, ...]
+#       note: <why, and who decided>
+#
+# The entries below are illustrative placeholders using fixture CIKs. Replace
+# them with real ones before running against EDGAR; an unverified merge here is
+# worse than no merge at all.
+
+families: []
+  # - name: EXAMPLE MULTI-MANAGER PLATFORM
+  #   ciks: [1000004, 1000011]
+  #   note: >
+  #     Same investment committee, separate legal entities, both file 13F-HR.
+  #     Verified against the ADV Part 1 Schedule A on 2024-06-14.
+  #
+  # - name: EXAMPLE ADVISER AND ITS TRUST
+  #   ciks: [1000024, 1000037]
+  #   note: >
+  #     The trust's cover page lists the adviser by name with no CIK, so the
+  #     otherManagers graph cannot link them automatically.
