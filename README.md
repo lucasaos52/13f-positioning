@@ -24,6 +24,10 @@ python run_experiments.py    # the full experiment pipeline
 python run_experiments.py --quick    # core results only
 ```
 
+On Windows, if `python` is not on PATH, use `py` or a full interpreter
+path (e.g. `.venv\Scripts\python.exe`) in place of `python`; a fresh
+virtual environment is recommended so stage 1 installs cleanly.
+
 `bootstrap.py --status` shows which data stages already exist; every
 stage is skipped when its output is present, so partial clones and
 re-runs are cheap. The EDGAR download needs only a contact e-mail in

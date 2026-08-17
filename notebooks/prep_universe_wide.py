@@ -29,6 +29,7 @@ import requests
 
 HERE = Path(__file__).resolve().parent
 DATA = HERE / "data"
+DATA.mkdir(parents=True, exist_ok=True)   # fresh clones have no data/
 CURATED = HERE.parents[0] / "crowdflow" / "data" / "20_curated"
 AVAIL_DAYS = 71
 
