@@ -32,16 +32,11 @@ def main() -> None:
     cmap = pd.read_csv(f, dtype=str).dropna().set_index("instrument_id")[
         "ticker"]
     add = {k: v for k, v in HAND_MAP.items() if k not in cmap.index}
-    # CACHE GUARD: the market layer keys its price cache on the count
-    # of unique tickers; adding a mapping whose ticker is not already
-    # cached would silently trigger a full re-download. On a machine
-    # with an existing cache, only add mappings to already-cached
-    # tickers; from a clean clone (no cache) everything is added and
-    # the first fetch covers it.
-    caches = sorted((ROOT / "factors" / "data").glob("prices_*tk_*.csv"))
-    if caches:
-        cached = set(pd.read_csv(caches[-1], index_col=0, nrows=1).columns)
-        add = {k: v for k, v in add.items() if v in cached}
+    # note: adding mappings changes the unique-ticker count, and the
+    # market layer keys its price cache on that count - so the next
+    # load after new additions triggers a (cheap, incremental-by-
+    # design on fresh clones) re-fetch. Run this BEFORE the first
+    # price fetch, which is what bootstrap.py does.
     if not add:
         print("hand-map already applied (0 additions)")
         return

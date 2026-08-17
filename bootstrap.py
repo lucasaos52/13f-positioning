@@ -83,8 +83,24 @@ stage(3, "quarterly point-in-time store",
                         "q_*.parquet"),
       lambda: _run([PY, "factors/general_plan/prep_quarters.py"]))
 
+def _crosswalk_done() -> bool:
+    """Complete only if the hand-curated corrections are IN the map
+    (a crashed partial run can leave the file without them - checked
+    via a sentinel hand-mapped CUSIP)."""
+    f = ROOT / "notebooks/data/cm_map_wide.csv"
+    if not f.exists():
+        return False
+    try:
+        sys.path.insert(0, str(ROOT / "data-quality-check"))
+        from fix_crosswalk_top import HAND_MAP
+        sentinel = next(iter(HAND_MAP))
+        return sentinel in f.read_text(encoding="utf-8", errors="ignore")
+    except Exception:
+        return f.exists()
+
+
 stage(4, "CUSIP->ticker crosswalk (+hand-curated corrections)",
-      lambda: (ROOT / "notebooks/data/cm_map_wide.csv").exists(),
+      _crosswalk_done,
       lambda: (_run([PY, "notebooks/prep_universe_wide.py"]),
                _run([PY, "notebooks/apply_handmap.py"])))
 
