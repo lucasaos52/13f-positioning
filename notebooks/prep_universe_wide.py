@@ -111,7 +111,15 @@ def main() -> None:
         f"(ambiguous names dropped: {int((amb > 1).sum()):,})")
     cmap.rename("ticker").to_csv(DATA / "cm_map_wide.csv")
 
-    panel = pd.read_csv(DATA / "imbalance_panel.csv.gz", parse_dates=["period_end"])
+    # legacy tail: maps the early imbalance-replication signal file if
+    # its intermediate exists (not part of the bootstrap path; fresh
+    # clones skip it - the crosswalk above is already written)
+    ip = DATA / "imbalance_panel.csv.gz"
+    if not ip.exists():
+        log("imbalance_panel.csv.gz not present - legacy signal "
+            "mapping skipped (crosswalk already written)")
+        return
+    panel = pd.read_csv(ip, parse_dates=["period_end"])
     panel["ticker"] = panel["instrument_id"].map(cmap)
     mapped = panel.dropna(subset=["ticker"]).copy()
     per_q = mapped.groupby("period_end").size()
